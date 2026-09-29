@@ -52,13 +52,13 @@ Explore is where people share recipes with everyone who uses Recimama. **Nothing
 
 **Taking it down.** In the recipe's **More** menu choose **Shared — manage it**, or go to **Explore > More > Recipes you shared**. Swipe left on the recipe, tap **Take down**, then confirm with **Take it down**. The recipe stops appearing in Explore for everyone. Copies that people have already added to their own libraries stay with them. We can't reach those, and neither can you.
 
-**If you can't take it down yourself** (for example, you have a new phone), email **rodrigobayapps@gmail.com** with the recipe's title and roughly when you published it. We'll delete it, usually within 24 hours. If you'd like us to remove *everything* you've published, tell us, and we'll delete all the public records carrying your iCloud identifier.
+**If you can't take it down yourself** (for example, you have a new phone), email **[rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com)** with the recipe's title and roughly when you published it. We'll delete it, usually within 24 hours. If you'd like us to remove *everything* you've published, tell us, and we'll delete all the public records carrying your iCloud identifier.
 
 ## 4. Reports and blocks
 
 **Reporting.** Every Explore recipe has a **Report** button. A report records which recipe you reported, the reason you chose, any comment you add (up to 200 characters), the time, and the identifier of the cook who published it. It is saved to the public iCloud database, where only we can read it; other users can't. iCloud also attaches **your** iCloud identifier to it, as it does to anything saved there.
 
-If the report can't be sent (for example, you're offline), the app offers to **email** it to rodrigobayapps@gmail.com instead. That email comes from your own mail account, so we'll see your email address and anything you add. We use these details only to act on the report.
+If the report can't be sent (for example, you're offline), the app offers to **email** it to [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) instead. That email comes from your own mail account, so we'll see your email address and anything you add. We use these details only to act on the report.
 
 **What we do with reports.** We review every report within 24 hours. If a recipe breaks the [community guidelines](guidelines.html), we delete it. If a cook keeps breaking them, we add their iCloud identifier to a **blocked list**, which Recimama checks so their recipes are hidden for everyone. The blocked list contains identifiers only, no names.
 
@@ -119,7 +119,7 @@ Recimama has no sign-up or login and no account with us. It contains no analytic
 
 ## 11. Children
 
-Because it has a web browser, Recimama is rated 16+ on the App Store in most places (15+ in Korea, and 17+ on devices using a system older than version 26, shown as 18+ in France). It isn't directed at children. We don't knowingly collect personal information from children. If you believe a child has published something to Explore, email rodrigobayapps@gmail.com and we'll remove it.
+Because it has a web browser, Recimama is rated 16+ on the App Store in most places (15+ in Korea, and 17+ on devices using a system older than version 26, shown as 18+ in France). It isn't directed at children. We don't knowingly collect personal information from children. If you believe a child has published something to Explore, email [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) and we'll remove it.
 
 ## 12. How long information is kept, and how to delete it
 
@@ -127,14 +127,14 @@ Because it has a web browser, Recimama is rated 16+ on the App Store in most pla
 |---|---|---|
 | Your library, plans, pantry, history | Until you delete it | Delete it in the app, or delete the app. For the iCloud copy: iPhone Settings > [your name] > iCloud > Manage Storage > Recimama. |
 | Rotas and dinner parties | Until you delete them | Deleting a live-shared rota you organise removes it for everyone who joined. Deleting a live rota you joined takes you off it; call off any meal you signed up for first if you don't want it left on the rota. A rota that isn't live-shared is deleted only from your own devices. Rota files, invitations and messages you have already sent stay with the people you sent them to. If you stopped sharing a rota before deleting it, a copy stays in your private iCloud; deleting Recimama's iCloud data (first row) removes it, along with the iCloud copy of your library. |
-| A recipe you published | Until you or we take it down | "Take it down" (section 3), or email rodrigobayapps@gmail.com |
-| Reports | Until we've dealt with them, then deleted, except where needed to deal with repeated abuse | Email rodrigobayapps@gmail.com |
-| Blocked list entries | While the block stands | Email rodrigobayapps@gmail.com to ask for a review |
+| A recipe you published | Until you or we take it down | "Take it down" (section 3), or email [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) |
+| Reports | Until we've dealt with them, then deleted, except where needed to deal with repeated abuse | Email [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) |
+| Blocked list entries | While the block stands | Email [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) to ask for a review |
 | Emails to us | As long as needed to answer you | Ask us to delete them |
 
 ## 13. Your rights
 
-You can ask us what we hold about you, and ask us to correct or delete it, by emailing rodrigobayapps@gmail.com. The only information we can link to you is what you published or sent us: recipes, reports and emails. Because we don't know who you are from your iCloud identifier, tell us which recipes are yours (or send the request from the device you published from), so we can find them. You can withdraw consent at any time: take down what you published, stop sharing a rota, turn off iCloud sync (which stops your library being copied to iCloud and new rotas being put there automatically; a rota you already shared stays shared until you stop sharing it, as section 2 explains), or turn off a permission. Depending on where you live, you may also be able to complain to your data-protection authority.
+You can ask us what we hold about you, and ask us to correct or delete it, by emailing [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com). The only information we can link to you is what you published or sent us: recipes, reports and emails. Because we don't know who you are from your iCloud identifier, tell us which recipes are yours (or send the request from the device you published from), so we can find them. You can withdraw consent at any time: take down what you published, stop sharing a rota, turn off iCloud sync (which stops your library being copied to iCloud and new rotas being put there automatically; a rota you already shared stays shared until you stop sharing it, as section 2 explains), or turn off a permission. Depending on where you live, you may also be able to complain to your data-protection authority.
 
 Where the law asks us to state a legal basis: we publish your recipe because you asked us to, and we handle reports and blocks because keeping Explore safe is in the legitimate interest of everyone who uses it.
 
