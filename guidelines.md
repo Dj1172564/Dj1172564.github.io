@@ -30,7 +30,7 @@ Don't say a recipe is safe for an allergy or a medical condition. Cooks reading 
 
 Open the recipe, or long-press it in Explore, and tap **Report**. Choose a reason and, if you like, add a comment. You can also **Block** the cook, which hides everything they share from you and lets us know. Or **Hide** a single recipe.
 
-If reporting in the app doesn't work, email **[rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com)** with the recipe's title and the cook's name. Include your contact details if you want to hear back about a copyright or privacy complaint.
+If reporting in the app doesn't work, email **rodrigobayapps@gmail.com** with the recipe's title and the cook's name. Include your contact details if you want to hear back about a copyright or privacy complaint.
 
 ## What happens next
 
@@ -38,7 +38,7 @@ If reporting in the app doesn't work, email **[rodrigobayapps@gmail.com](mailto:
 - A recipe that breaks these guidelines is **taken down** for everyone.
 - A cook who breaks them seriously or repeatedly is **blocked from Explore**, and everything they have shared disappears for everyone. Something clearly illegal, hateful or sexual can get a cook blocked the first time.
 - Recimama checks words automatically when you publish and when recipes are shown. That check is a safety net, not permission: something that gets past it can still be taken down.
-- If you think we got it wrong, email [rodrigobayapps@gmail.com](mailto:rodrigobayapps@gmail.com) and we'll look again.
+- If you think we got it wrong, email rodrigobayapps@gmail.com and we'll look again.
 
 ## Your recipes stay yours
 
