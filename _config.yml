@@ -1,3 +1,68 @@
 title: Recimama
-description: A cooking app that turns any recipe into a timeline.
-theme: jekyll-theme-primer
+description: Recimama turns a recipe into a timeline and tells you when to start each step. Coming soon to the App Store, for iPhone, iPad and Apple Watch.
+url: "https://recimama.com"
+baseurl: ""
+markdown: kramdown
+
+# The one place the contact address is written. The footer and the home page read it.
+email: rodrigobayapps@gmail.com
+
+# True only while the 14-day free trial (the introductory offer, docs/app-store/YOUR-STEPS.md
+# step P7) is live in App Store Connect for BOTH plans. Switched on 2026-09-30: the App Store
+# Connect API showed, at 16:12 that day, a two-week free-trial introductory offer on both plans in
+# all 175 territories. Switch back to false if that offer is ever removed or changed.
+# It changes the Pro wording on the home page; nothing else.
+pro_trial: true
+
+# The "Ready for the iPhone Duo" section on the home page. True because the device has been
+# announced and goes on sale next month, and the section says so: the support arrives in an app
+# update when the Duo does, never that today's download already has it. Switch to false and the
+# whole section goes from the page, screenshots and drawing with it. The image files
+# (assets/screens/13-duo-* and 14-duo-*) are still published, just unreferenced; delete them too
+# if they must not be on the site at all. Nothing else reads this.
+duo_ready: true
+
+# No theme. GitHub Pages applies jekyll-theme-primer unless this says null, and
+# every page here uses _layouts/default.html instead.
+theme: null
+
+# The Markdown pages (privacy.md, support.md, guidelines.md, and later terms.md,
+# copyright.md, report.md) need no front matter; this default gives them the layout.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  # Each document's own search and link-preview snippet, so they don't all share the home page's.
+  # Front matter in the page itself, if it is ever added, wins over these.
+  - scope:
+      path: "privacy.md"
+    values:
+      description: "What information Recimama handles, who receives it, how long it's kept and how to delete it."
+  - scope:
+      path: "support.md"
+    values:
+      description: "Help with Recimama: how to get in touch, report a shared recipe, take down something you published, and get your recipes on a new device."
+  - scope:
+      path: "guidelines.md"
+    values:
+      description: "The rules for sharing recipes on Recimama's Explore: share only what's yours, keep it about food, and what happens when something is reported."
+  - scope:
+      path: "terms.md"
+    values:
+      description: "Recimama's Terms of Use: sharing recipes on Explore, how moderation works, cooking safety, Recimama Pro and the ads."
+  - scope:
+      path: "copyright.md"
+    values:
+      description: "How to tell Recimama that something shared on Explore copies your work, and how to answer a notice about your own recipe."
+  - scope:
+      path: "report.md"
+    values:
+      description: "How anyone can report illegal content on Recimama, with or without the app, and what happens next."
+
+# Publish /privacy.html but not the raw /privacy.md beside it.
+optional_front_matter:
+  remove_originals: true
+
+# There is deliberately no `exclude:` list. Setting one replaces GitHub Pages'
+# default, and that default is what keeps CNAME from being published as a file.

@@ -1,0 +1,591 @@
+---
+layout: default
+title: "Recimama: any recipe, as a timeline"
+og_title: "Recimama: any recipe, as a timeline"
+og_description: "It tells you when to start each step, so the meal is ready when you are. Coming soon for iPhone, iPad and Apple Watch."
+body_class: home
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-head">
+      <div class="hero-title">
+        <p class="eyebrow">For iPhone, iPad and Apple Watch</p>
+        <h1 id="hero-title">Any recipe, as a timeline.</h1>
+      </div>
+      <div class="hero-intro">
+        <p class="lede">Recimama turns a recipe into a timeline. It works out which steps can happen at the same time, tells you what to do next and sets an alert for each step, so everything comes together when you want to eat.</p>
+        <p class="soon"><span class="soon-badge">Coming soon to the App Store</span> <span class="soon-note">Free to download, with an optional subscription.</span></p>
+      </div>
+    </div>
+
+    <figure class="meal" aria-labelledby="meal-caption">
+      <div class="meal-head">
+        <div>
+          <p class="meal-kicker">Tonight: roast chicken, mashed potatoes and green beans</p>
+          <p class="meal-title">Start at 5:35, on the table at 7:00</p>
+        </div>
+        <dl class="meal-stats">
+          <div><dt>Start to finish</dt><dd>1 hr 25 min</dd></div>
+          <div><dt>Hands on</dt><dd>1 hr 2 min</dd></div>
+        </dl>
+      </div>
+
+      <div class="chart" style="--span: 90">
+        <div class="axis" aria-hidden="true">
+          <span style="--t: 0">5:30</span>
+          <span style="--t: 30">6:00</span>
+          <span class="axis-630" style="--t: 60">6:30</span>
+        </div>
+        <ul class="lanes">
+          <li class="lane" style="--c: var(--c-carrot)">
+            <p class="lane-name">Roast chicken <small>starts 5:35</small></p>
+            <ol class="track">
+              <li class="bar hands" style="--s: 5; --d: 10"><span class="sr">5:35 to 5:45, hands on: </span><span class="label fit-4">Season it</span></li>
+              <li class="bar self" style="--s: 15; --d: 60"><span class="sr">5:45 to 6:45, looks after itself: </span><span class="label fit-3">Roasts</span></li>
+              <li class="bar self" style="--s: 75; --d: 15"><span class="sr">6:45 to 7:00, looks after itself: </span><span class="label fit-3">Rests</span></li>
+            </ol>
+          </li>
+          <li class="lane" style="--c: var(--c-honey)">
+            <p class="lane-name">Mashed potatoes <small>starts 5:45</small></p>
+            <ol class="track">
+              <li class="bar hands" style="--s: 15; --d: 12"><span class="sr">5:45 to 5:57, hands on: </span><span class="label fit-6">Peel and chop</span></li>
+              <li class="bar self" style="--s: 45; --d: 10"><span class="sr">6:15 to 6:25, looks after itself: </span><span class="label fit-5">Water heats</span></li>
+              <li class="bar eye" style="--s: 55; --d: 20"><span class="sr">6:25 to 6:45, keep an eye on it: </span><span class="label fit-3">Boils</span></li>
+              <li class="bar hands" style="--s: 78; --d: 12"><span class="sr">6:48 to 7:00, hands on: </span><span class="label fit-6">Drain and mash</span></li>
+            </ol>
+          </li>
+          <li class="lane" style="--c: var(--c-basil)">
+            <p class="lane-name">Green beans <small>starts 5:57</small></p>
+            <ol class="track">
+              <li class="bar hands" style="--s: 27; --d: 5"><span class="sr">5:57 to 6:02, hands on: </span><span class="label fit-2">Trim</span></li>
+              <li class="bar hands" style="--s: 75; --d: 3"><span class="sr">6:45 to 6:48, hands on: into the steamer</span></li>
+              <li class="bar self" style="--s: 78; --d: 12"><span class="sr">6:48 to 7:00, looks after itself: </span><span class="label fit-3">Steams</span></li>
+            </ol>
+          </li>
+          <li class="lane lane-you" aria-hidden="true">
+            <p class="lane-name">You <small>one cook</small></p>
+            <div class="track">
+              <span class="bar hands" style="--c: var(--c-carrot); --s: 5; --d: 10"></span>
+              <span class="bar hands" style="--c: var(--c-honey); --s: 15; --d: 12"></span>
+              <span class="bar hands" style="--c: var(--c-basil); --s: 27; --d: 5"></span>
+              <span class="gap" style="--s: 32; --d: 23"><span class="gap-long">23 min </span>break</span>
+              <span class="bar eye" style="--c: var(--c-honey); --s: 55; --d: 20"></span>
+              <span class="bar hands" style="--c: var(--c-basil); --s: 75; --d: 3"></span>
+              <span class="bar hands" style="--c: var(--c-honey); --s: 78; --d: 12"></span>
+            </div>
+          </li>
+        </ul>
+        <div class="chart-grid" aria-hidden="true">
+          <div class="dinner"><span>Dinner 7:00</span></div>
+        </div>
+      </div>
+
+      <figcaption class="meal-foot">
+        <ul class="legend" aria-label="Key">
+          <li><span class="key hands"></span>Hands on</li>
+          <li><span class="key eye"></span>Keep an eye on it</li>
+          <li><span class="key self"></span>Looks after itself</li>
+        </ul>
+        <p class="meal-caption" id="meal-caption">An example meal for one cook, timed for dinner at 7:00. <span class="cap-more">The prep comes first, the potatoes and beans slot into the time the chicken is already taking, and your hands are never needed in two places at once: 1 hour 2 minutes hands on or keeping an eye on things, with a 23-minute break in the middle. </span>You can plan a meal like this without Pro; cooking the dishes along together, on one clock, is part of Recimama Pro.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="step" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-text">
+        <p class="eyebrow"><span class="step-no">1</span> One recipe</p>
+        <h2 id="how-title">Cooking is a plan, not a list.</h2>
+        <p>Each step knows how long it takes and whether it needs your hands, a watchful eye or nothing at all, so the water heats while the bacon fries. Recimama works out what has to wait for what and overlaps everything else, but never more than your kitchen can do at once, going by the burners and ovens you tell it you have.</p>
+        <p class="key-intro" id="attn-key-title">In the app’s charts, a step’s colour shows how much attention it needs:</p>
+        <ul class="attn-key" aria-labelledby="attn-key-title">
+          <li><span class="attn-swatch attn-hands" aria-hidden="true"></span>Hands on</li>
+          <li><span class="attn-swatch attn-eye" aria-hidden="true"></span>Keep an eye on it</li>
+          <li><span class="attn-swatch attn-self" aria-hidden="true"></span>Looks after itself</li>
+        </ul>
+        <p>The chopping and grating come first, all of it before step 1, and they’re counted in the time. Change the servings, or switch between metric and imperial, and the amounts follow. Want to eat at a set time? Work back from it, and the recipe tells you when to start.</p>
+        <figure class="story-fig">
+          <div class="story story-prep" aria-hidden="true">
+            <p class="story-head"><span>Spaghetti Carbonara</span><span class="story-meta">for 2</span></p>
+            <p class="story-lab s1-lab">Ingredients <em>ticked: already in your pantry</em></p>
+            <ul class="s1-ing">
+              <li style="--i: 0"><span class="s-tick"></span>120 g pancetta</li>
+              <li style="--i: 1"><span class="s-tick"></span>60 g pecorino</li>
+              <li style="--i: 2"><span class="s-tick"></span>200 g spaghetti</li>
+              <li style="--i: 3"><span class="s-tick"></span>2 eggs</li>
+            </ul>
+            <p class="story-lab s1-lab s1-plab">Prep <em>all of it first, before step 1</em></p>
+            <ul class="s1-prep">
+              <li style="--i: 0"><span class="s1-hatch"></span><span>Grate pecorino</span><em>2 min</em></li>
+              <li style="--i: 1"><span class="s1-hatch"></span><span>Dice pancetta</span><em>3 min</em></li>
+            </ul>
+            <p class="s1-step"><span class="s1-no">1</span><span>Boil water</span><em>8 min</em></p>
+          </div>
+          <figcaption>Drawn for this page, not a screenshot: the ingredients your pantry already covers tick themselves off, then the prep lights up — grate pecorino, dice pancetta — all of it first, before step 1, Boil water.</figcaption>
+        </figure>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/02-recipe-timeline.webp">
+            <img src="/assets/screens/02-recipe-timeline.jpg" width="600" height="1304" loading="lazy" alt="The Spaghetti Carbonara recipe on its Timeline view: coloured bars for you and the stovetop, keyed as hands on, keep an eye on it and looks after itself, with the prep drawn first. Below are a Start cooking button and the method, where each step shows its time and how much attention it needs.">
+          </picture>
+          <figcaption>Every step has a time and an attention level.</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/04-prep-first.webp">
+            <img src="/assets/screens/04-prep-first.jpg" width="600" height="1000" loading="lazy" alt="The Spaghetti Carbonara ingredients for two, four of them ticked as already in the pantry, then a Prep section, grate pecorino and dice pancetta, about 5 minutes, with a note that all of it comes first, before step 1. Below are a Pro option for cooking with someone and a Start cooking button.">
+          </picture>
+          <figcaption>The prep comes first, before step 1.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="feature feature-flip">
+      <div class="feature-text">
+        <h3>Get a recipe in, any way you like.</h3>
+        <p>Clip it from a web page, share a link or a screenshot, photograph a cookbook page, dictate it or paste the text, then check what was read before it’s saved. Photographed pages and dictation are read on your device.</p>
+        <p>Every recipe gets its own colour in your library, with its total and hands-on time on the card.</p>
+      </div>
+      <div class="shots shots-mixed">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/10-add-a-recipe.webp">
+            <img class="crop" src="/assets/screens/10-add-a-recipe.jpg" width="600" height="642" loading="lazy" alt="The Add a recipe sheet, offering Find one on the web, Photograph a page, for a cookbook page, a magazine or a handwritten card, read on this device, and Dictate it, transcribed on this device.">
+          </picture>
+          <figcaption>From the web, a photographed page or your voice.</figcaption>
+        </figure>
+        <figure class="shot shot-cards">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/03-library-cards.webp">
+            <img class="crop" src="/assets/screens/03-library-cards.jpg" width="800" height="622" loading="lazy" alt="Six recipe cards from the library, each in its own colour: Beef Lasagne, Slow Beef Ragu, Thai Green Curry, Red Lentil Dal, Sheet-Pan Salmon and Greens, and Roast Root Vegetables, each showing total and hands-on time.">
+          </picture>
+          <figcaption>Your library, in colour.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="step band" id="meal" aria-labelledby="meal-title">
+  <div class="wrap">
+    <div class="feature feature-flip">
+      <div class="feature-text">
+        <p class="eyebrow"><span class="step-no">2</span> A whole meal</p>
+        <h2 id="meal-title">A whole meal, on one timeline.</h2>
+        <p>Pick a main and a side or two and see them timed to finish together, with the sides slotted into the time the main is already taking, or read the whole meal as one recipe.</p>
+        <p>Recimama shows how long the meal takes cooked together against one dish after another, and when to start so it’s on the table on time.</p>
+        <figure class="story-fig">
+          <div class="story story-together" aria-hidden="true">
+            <p class="story-head"><span>Red Lentil Dal and Spaghetti Carbonara</span></p>
+            <div class="s2-mode"><span class="s2-a">One dish at a time</span><span class="s2-b">All together</span></div>
+            <div class="s2-chart">
+              <div class="s2-gain"></div>
+              <div class="s2-bar s2-bar1" style="--s: 13; --d: 57"><span>Red Lentil Dal</span></div>
+              <div class="s2-move">
+                <div class="s2-bar s2-bar2" style="--s: 37; --d: 33"><span>Carbonara</span></div>
+                <div class="s2-finish"><span>Both ready</span></div>
+              </div>
+            </div>
+            <div class="s2-totals"><span class="s2-ta">1 hr 30 min</span><span class="s2-tb">1 hr 10 min</span></div>
+            <p class="s2-saved"><span class="s-count" style="--n: 4"><i><b>0</b><b>5</b><b>10</b><b>15</b><b>20</b></i></span><span>min saved by cooking these two together</span></p>
+          </div>
+          <figcaption>Drawn for this page: on its own the dal takes about 57 min and the carbonara about 33, so one dish after another takes 1 hr 30 min. Slid onto one timeline, with the shorter dish tucked into the time the long one is already taking, both are ready together in 1 hr 10 min — 20 min saved by cooking these two together.</figcaption>
+        </figure>
+        <p class="aside">Planning a meal and reading it as one recipe don’t need Pro. Cooking the dishes along together, on one clock, is part of <a href="#pro">Recimama Pro</a>.</p>
+      </div>
+      <div class="shots shots-single">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/05-plan-a-meal-top.webp">
+            <img class="crop" src="/assets/screens/05-plan-a-meal-top.jpg" width="600" height="900" loading="lazy" alt="Plan a meal with two dishes chosen, Red Lentil Dal and Spaghetti Carbonara: 1 hour 10 minutes all together against 1 hour 30 minutes one dish at a time, and a green panel saying 20 minutes saved by cooking these two together.">
+          </picture>
+          <figcaption>Two dishes together: 20 minutes saved.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="step" id="cook" aria-labelledby="cook-title">
+  <div class="wrap">
+    <div class="feature feature-cook">
+      <div class="feature-text">
+        <p class="eyebrow"><span class="step-no">3</span> Cooking along</p>
+        <h2 id="cook-title">Put the phone down. It’ll tell you when.</h2>
+        <p>Start a cook and the app keeps time: what to do now, what’s next, and how long is left.</p>
+        <ul class="ticks">
+          <li>An alert for each step, so you can put the phone down.</li>
+          <li>The timeline on your Lock Screen, counting down the step you’re on.</li>
+          <li>The step you’re on, on <a href="#watch">your Apple Watch</a>, with one tap to say it’s done.</li>
+          <li>Turn the phone on its side for one big step at a time.</li>
+          <li>Or ask Siri, “What’s next in Recimama?”</li>
+        </ul>
+        <figure class="story-fig">
+          <div class="story story-cook" aria-hidden="true">
+            <div class="s3-alert"><b>Spaghetti Carbonara</b><span>Whisk eggs</span><em>2 min · Hands on</em></div>
+            <p class="story-head"><span>Spaghetti Carbonara</span><span class="story-meta">12 min remaining</span></p>
+            <p class="s3-set">Alerts set — you can put the phone down.</p>
+            <div class="s3-now">
+              <div class="s3-card s3-card-a">
+                <p class="s3-k">In progress</p>
+                <p class="s3-t"><span>Fry bacon</span><span class="s-att s-hands">Hands on</span></p>
+                <p class="s3-row"><span class="s3-cd s-count" style="--n: 2"><i><b>3 min</b><b>2 min</b><b>1 min</b></i></span><span>left</span><span class="s3-btn">Done — next step</span></p>
+                <p class="s3-meter"><i></i></p>
+                <span class="s-tick s3-cardtick"></span>
+              </div>
+              <div class="s3-card s3-card-b">
+                <p class="s3-k">In progress</p>
+                <p class="s3-t"><span>Whisk eggs</span><span class="s-att s-hands">Hands on</span></p>
+                <p class="s3-row"><span>2 min left</span><span class="s3-btn">Done — next step</span></p>
+                <p class="s3-meter"><i></i></p>
+              </div>
+            </div>
+            <div class="s3-next">
+              <ul class="s3-list-a">
+                <li><span class="s3-in">in 2 min</span><span>Whisk eggs</span><span class="s-att s-hands">Hands on</span></li>
+                <li><span class="s3-in">in 3 min</span><span>Cook pasta</span><span class="s-att s-eye">Keep an eye on it</span></li>
+              </ul>
+              <ul class="s3-list-b">
+                <li><span class="s3-in">in 1 min</span><span>Cook pasta</span><span class="s-att s-eye">Keep an eye on it</span></li>
+                <li><span class="s3-in">in 10 min</span><span>Toss together</span><span class="s-att s-hands">Hands on</span></li>
+              </ul>
+            </div>
+          </div>
+          <figcaption>Drawn for this page: the step you are on counts down and ticks itself done, the next one takes its place, and its alert arrives the way the app writes one — the recipe, the step, then how long it takes and how much attention it wants.</figcaption>
+        </figure>
+        <p class="aside">Times are estimates. Recimama can’t see your pan, so always check that food is cooked through.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/01-cook-along.webp">
+            <img src="/assets/screens/01-cook-along.jpg" width="600" height="1304" loading="lazy" alt="Recimama’s cook-along screen for Spaghetti Carbonara: 2 seconds elapsed and 32 minutes remaining, a note that alerts are set so you can put the phone down, the step in progress, Pancetta, diced, with 120 grams of pancetta and 2 minutes left, the next three steps in 2 and 4 minutes, and the recipe’s timeline below.">
+          </picture>
+          <figcaption>What’s happening now, and what’s coming up.</figcaption>
+        </figure>
+      </div>
+      <figure class="shot shot-wide">
+        <picture>
+          <source type="image/webp" srcset="/assets/screens/07-cook-sideways.webp">
+          <img src="/assets/screens/07-cook-sideways.jpg" width="1200" height="552" loading="lazy" alt="The cook-along with the phone on its side: the current step, Pancetta, diced, in large type with 2 minutes left and a large Done, next step button, and what’s coming up in 2 and 4 minutes beside it.">
+        </picture>
+        <figcaption>On its side: one big step, and what’s next beside it.</figcaption>
+      </figure>
+    </div>
+
+{%- comment -%}
+  The Apple Watch. A second block inside "Cooking along", the way "Get a recipe in" sits inside "One
+  recipe": the watch app is the cook-along on a wrist — it has nothing to show until a cook is running on
+  the phone — so it goes with the screen it follows. Placed here rather than as a section of its own, the
+  1-2-3-4 spine needs no new number and the plain/band alternation is exactly as it was.
+  Every sentence is the watch app as built (main and worktree watch-fixes agree on all of it):
+    Late, then Now with its countdown, then Next "in 4:12"; a late step counts up —
+      Watch/MiseEnPlaceWatchApp.swift, WatchCookView.cooking and .row
+    "Start a cook on your phone and it will appear here." — WatchCookView.idle
+    Done ticks the step — WatchLink.send (shown on the wrist at once), then PhoneWatchLink.apply ->
+      CookProgress.completeStep. The page does NOT say the phone ticks too: README "Getting it onto a wrist"
+      records that wrist -> phone never arrived between simulators and needs a real iPhone + Apple Watch to
+      check. Say "and it is ticked off on your phone too" again once that has been seen on real devices.
+    "All steps", Previous/Next either side of "1 of 3", opening on the step you're on —
+      WatchStepsView, CookReadthrough.startIndex
+    clears itself when the cook ends — PhoneWatchLink.publishNothing on every way a cook ends, and
+      WatchCookLink.State.isStale for a phone app that was killed
+    comes with the iPhone app — project.yml, MiseEnPlaceWatch is `embed: true` in the phone target;
+      README "Getting it onto a wrist" (Watch app on the iPhone, or Automatic App Install)
+    watchOS 11 or later — project.yml, MiseEnPlaceWatch deploymentTarget "11.0"
+    no ads, nothing asks for Pro — project.yml (the watch never links GoogleMobileAds, and
+      AdPlacementRulesTests checks the built watch app); nothing in Watch/ reads ProAccess
+  The two screenshots are the App Store's own 46 mm captures (416 x 496), shown at half size like every
+  other shot, in the page's ordinary shot frame: no watch case is drawn around them.
+{%- endcomment %}
+    <div class="feature feature-flip" id="watch">
+      <div class="feature-text">
+        <h3>What needs you, on your wrist.</h3>
+        <p>Start a cook on your phone and it appears on your Apple Watch: anything late first, then the step you’re on with its countdown, then what’s next and when it starts. Tap Done to tick the step off.</p>
+        <ul class="ticks">
+          <li>A late step counts up from when it should have finished.</li>
+          <li>“All steps” takes you back and forward through the recipe, one step at a time, starting at the one you’re on.</li>
+          <li>When the cook is over, the watch clears itself.</li>
+          <li>It comes with the iPhone app, and installs from the Watch app on your iPhone. It needs watchOS 11 or later.</li>
+          <li>No ads on the watch, and nothing there asks for Pro.</li>
+        </ul>
+      </div>
+      <div class="shots">
+        <figure class="shot shot-watch">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/15-watch-now.webp">
+            <img src="/assets/screens/15-watch-now.jpg" width="416" height="496" loading="lazy" alt="Recimama on an Apple Watch, showing a Spaghetti Carbonara cook sent from the iPhone: under Now, the step Pancetta — diced, with 2 minutes 49 seconds left in green and a large green Done button, and below it, under Next, Pecorino — finely grated.">
+          </picture>
+          <figcaption>Now, with one tap to say it’s done.</figcaption>
+        </figure>
+        <figure class="shot shot-watch">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/16-watch-steps.webp">
+            <img src="/assets/screens/16-watch-steps.jpg" width="416" height="496" loading="lazy" alt="Recimama’s Steps screen on an Apple Watch: buttons for the previous step, dimmed on the first one, and the next step, either side of 1 of 3; the step, Bring a large pot of salted water to the boil, in large type; and below it a red timer at 2:07 beside a red Done button, red because the step is running late.">
+          </picture>
+          <figcaption>All steps, back and forward through the recipe.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="step band" id="week" aria-labelledby="week-title">
+  <div class="wrap">
+    <div class="feature feature-flip">
+      <div class="feature-text">
+        <p class="eyebrow"><span class="step-no">4</span> The week</p>
+        <h2 id="week-title">Plan the week, shop once.</h2>
+        <p>Put dinners on your meal plan and get one shopping list, with amounts added together and what’s already in your pantry left off.</p>
+        <h3>What can I make?</h3>
+        <p>Tell it what you keep in, and it shows the recipes your pantry already covers.</p>
+        <figure class="story-fig">
+          <div class="story story-week" aria-hidden="true">
+            <p class="story-head"><span>Your week</span><span class="story-meta">3 dinners</span></p>
+            <ol class="s4-days">
+              <li><span class="s4-d">Mon</span><span class="s4-empty"></span></li>
+              <li><span class="s4-d">Tue</span><span class="s4-dish s4-dish1" style="--i: 0">Beef Lasagne</span></li>
+              <li><span class="s4-d">Wed</span><span class="s4-empty"></span></li>
+              <li><span class="s4-d">Thu</span><span class="s4-dish s4-dish2" style="--i: 1">Thai Green Curry</span></li>
+              <li><span class="s4-d">Fri</span><span class="s4-empty"></span></li>
+              <li><span class="s4-d">Sat</span><span class="s4-dish s4-dish3" style="--i: 2">Red Lentil Dal</span></li>
+              <li><span class="s4-d">Sun</span><span class="s4-empty"></span></li>
+            </ol>
+            <div class="s4-list">
+              <p class="story-lab s4-lab">Shopping list <span class="s4-n"><span class="s4-na">3 to get</span><span class="s4-nb">All done</span></span></p>
+              <div class="s4-merge">
+                <span class="s4-m1"><span class="s-box"></span>2 garlic cloves</span>
+                <span class="s4-m2"><span class="s-box"></span>3 garlic cloves</span>
+                <span class="s4-m3"><span class="s-box"><span class="s-tick" style="--i: 0"></span></span>5 garlic cloves <em>added together</em></span>
+              </div>
+              <ul class="s4-items">
+                <li style="--i: 0"><span class="s-box"><span class="s-tick" style="--i: 1"></span></span>olive oil</li>
+                <li style="--i: 1"><span class="s-box"><span class="s-tick" style="--i: 2"></span></span>coconut milk</li>
+              </ul>
+              <p class="s4-pantry">Already in your pantry, so left off: <span>ground cumin</span></p>
+            </div>
+          </div>
+          <figcaption>Drawn for this page: three dinners drop onto the days of the week, then one shopping list fills and ticks itself off — two garlic cloves and three become five, added together — with what is already in your pantry left off.</figcaption>
+        </figure>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/09-shopping-list.webp">
+            <img src="/assets/screens/09-shopping-list.jpg" width="600" height="1304" loading="lazy" alt="A shopping list of 7 things to get for the chosen dishes, such as dried yeast, olive oil, rosemary and strong white flour, a note that amounts are added together across the dishes, and a separate list of what is already in the pantry.">
+          </picture>
+          <figcaption>One list, amounts added together.</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/12-pantry.webp">
+            <img src="/assets/screens/12-pantry.jpg" width="600" height="1304" loading="lazy" alt="The pantry: staples you keep in, such as eggs, pancetta, pecorino and spaghetti, each marked Have it, a weekly reminder switched on, and common staples you can add.">
+          </picture>
+          <figcaption>What you keep in.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%}
+  The iPhone Duo section. Apple has announced the device and it goes on sale next month; Recimama's
+  support for it ships in an APP UPDATE, not in the first version. So every line here is written in
+  the future — "Ready for", "arrives in an update when the Duo does" — and nothing claims that the
+  download waiting on the App Store already folds. None of it is Pro (CookAlongView gates none of
+  the layout work behind a subscription), so nothing here is marked Pro.
+
+  Placed after "The week" and before Pro on purpose. Three reasons: the 1-2-3-4 spine through the
+  cooking story stays unbroken, where a section dropped between 3 and 4 would need a number it
+  hasn't earned; "The week" is a band, so the page's own light/band alternation wants a plain
+  section next; and a promise about next month belongs with the other two forward-looking,
+  unnumbered sections, Pro and "Coming soon to the App Store". The words still point back to
+  "Cooking along", which is the screen all of this happens on.
+
+  `duo_ready` in _config.yml takes the whole thing off the page, screenshots and drawing with it
+  (the 13-duo-* and 14-duo-* files stay published under /assets/screens, unreferenced).
+
+  The open layout's second half holds only what's coming and the timeline; the step's ingredients
+  stay in the step's half (CookAlongView.secondPane). The drawing is that open layout, and the
+  device opening into it: closed, the outer display's cook step; then one half swings open on the
+  vertical hinge like a book, and the inner display is the step with its ingredients in one half
+  (CookAlongView.focusColumn) and what's coming and the timeline in the other. It is a schematic
+  (rounded panels and a hinge line, no camera, buttons or island) and its caption says so. The
+  half-open "like a laptop" layout stays in the ticks. "Fill the screen" hides the bars and gives back
+  their height; in the 27.1 build the vertical bar stays as an empty, painted column that takes no
+  touches, and since 2026-09-30 the filled step runs under it and is centred on the glass
+  (DuoSDK.centredOnTheGlass: 16 pt a side on the outer display, 16…450 of 466 pt), so the tick says
+  the whole width and the 14-duo-fill-screen shot is that centred, filled single column.
+{%- endcomment %}
+{% if site.duo_ready %}
+<section class="step" id="duo" aria-labelledby="duo-title">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-text">
+        <p class="eyebrow">In an update</p>
+        <h2 id="duo-title">Ready for the iPhone Duo.</h2>
+        <p>The iPhone Duo goes on sale next month, and Recimama’s support for it arrives in an app update when the device does — not in the version you download first.</p>
+        <p>Opened flat, <a href="#cook">the cook screen</a> divides in two: the step you’re on, with the ingredients it needs, in one half, and what’s coming and the timeline in the other.</p>
+        <ul class="ticks">
+          <li>“Side by side” or “Top and bottom”, whichever you ask for.</li>
+          <li>Folded half open like a laptop, the step takes the top half, and nothing you need to tap sits on the crease.</li>
+          <li>The lower half is yours to choose: the timeline, what’s coming, the ingredients for this step, or none of them.</li>
+          <li>“Fill the screen” puts the app’s own bars away and gives the step all the room they took, centred across the whole width of the glass. One tap brings them back.</li>
+          <li>Finish stays one tap away in both layouts.</li>
+          <li>The page carries to every edge, under the system’s own strip.</li>
+        </ul>
+        <figure class="story-fig">
+          <div class="story story-duo" aria-hidden="true">
+            <p class="story-head"><span>Spaghetti Carbonara</span><span class="s5-fin">Finish</span></p>
+            <div class="s5-stage">
+              <div class="s5-dev">
+                <div class="s5-half s5-base">
+                  <div class="s5-grp">
+                    <p class="story-lab">What’s coming</p>
+                    <p class="s5-up"><span class="s5-in">in 2 min</span><span>Pecorino — finely grated</span></p>
+                    <p class="s5-up"><span class="s5-in s5-in-eye">in 4 min</span><span>Meanwhile, fry the pancetta in a dry pan until crisp, about 7 minutes.</span></p>
+                  </div>
+                  <div class="s5-grp">
+                    <p class="story-lab">Timeline</p>
+                    <div class="s5-tl">
+                      <span class="s5-bar" style="--i: 0; --c: var(--attn-hands-on); --s: 0; --d: 26"></span>
+                      <span class="s5-bar" style="--i: 1; --c: var(--attn-eye); --s: 20; --d: 44"></span>
+                      <span class="s5-bar" style="--i: 2; --c: var(--attn-self); --s: 58; --d: 42"></span>
+                    </div>
+                  </div>
+                </div>
+                <span class="s5-hinge"></span>
+                <div class="s5-leaf">
+                  <div class="s5-half s5-face s5-inside">
+                    <p class="s5-big">Pancetta — diced</p>
+                    <div class="s5-grp">
+                      <p class="s5-ing">120 grams pancetta</p>
+                      <p class="s5-row"><span class="s5-left">2 min left</span><span class="s5-how">Hands on</span></p>
+                      <p class="s5-meter"><i></i></p>
+                      <p class="s5-btn">Done — next step</p>
+                    </div>
+                  </div>
+                  <div class="s5-half s5-face s5-outer">
+                    <div class="s5-card">
+                      <p class="s5-t">Pancetta — diced</p>
+                      <p class="s5-row"><span>2 min left</span><span class="s-att s-hands">Hands on</span></p>
+                      <p class="s5-meter"><i></i></p>
+                    </div>
+                    <p class="s5-up"><span class="s5-in">in 2 min</span><span>Pecorino — finely grated</span></p>
+                    <p class="s5-up"><span class="s5-in s5-in-eye">in 4 min</span><span>Meanwhile, fry the pancetta in a dry pan until crisp, about 7 minutes.</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Drawn for this page, not a picture of the device: the cook screen as the update will lay it out. Closed, the step you’re on is on the outer screen; opened like a book, the step and its ingredients take one half, and what’s coming and the timeline the other. Finish never moves.</figcaption>
+        </figure>
+      </div>
+      <div class="shots shots-mixed">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/13-duo-cook.webp">
+            <img class="crop" src="/assets/screens/13-duo-cook.jpg" width="600" height="873" loading="lazy" alt="The cook-along screen on an iPhone Duo: Spaghetti Carbonara, 5 seconds elapsed and 27 minutes remaining, a note that alerts are set for each step and that the timeline is on the lock screen, the step in progress, Pancetta, diced, with 120 grams of pancetta, hands on and 2 minutes left, and three steps coming up. The page’s colour runs to the right-hand edge, under the system’s vertical strip, which holds the app’s own buttons: minimise, more, re-plan, the layout control and Finish.">
+          </picture>
+          <figcaption>Finish on the strip, and the page under it to the edge.</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/14-duo-fill-screen.webp">
+            <img class="crop" src="/assets/screens/14-duo-fill-screen.jpg" width="600" height="873" loading="lazy" alt="The same cook on an iPhone Duo with the screen filled: the recipe name, the clock and the buttons on the system’s vertical strip are gone, and the whole screen, centred with the same margin on both sides, holds 14 seconds elapsed and 27 minutes remaining, the alerts and lock-screen notes, the step in progress, Pancetta, diced, with 120 grams of pancetta, hands on and 2 minutes left, three steps coming up and the timeline. One small button in the bottom corner brings the bars back.">
+          </picture>
+          <figcaption>Fill the screen: the bars put away, the step centred edge to edge.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="step pro-section" id="pro" aria-labelledby="pro-title">
+  <div class="wrap">
+    <div class="feature pro-card">
+      <div class="feature-text">
+        <p class="eyebrow">Optional</p>
+        <h2 id="pro-title">Recimama Pro</h2>
+{%- comment -%}
+  The trial wording is true only while App Store Connect step P7 (a free two-week introductory offer on
+  BOTH plans) is live. `pro_trial` is true since 2026-09-30: the lead checked by the App Store Connect
+  API at 16:12 that both plans carry it in all 175 territories. Every clause of the TRUE branch is the
+  app's own rule: one trial per subscription group per Apple Account, and only while the App Store says
+  this account can have it (ProAccess.isEligibleForTrial, isEligibleForIntroOffer); "Cancel at least 24
+  hours before then and you won't be charged." (ProTerms.trialCancelNotice); "Renews automatically ...
+  until you cancel" (ProTerms.renewalPromise); no ads in a trial or a family share while it lasts
+  (ProTerms.noAdsSummary, docs/revenue-model/REPORT.md section 4, "No ads for").
+{%- endcomment %}
+{% if site.pro_trial %}
+        <p>Recimama is free to download, with an optional subscription. Recimama Pro starts with a 14-day free trial for new subscribers, once per Apple Account; cancel at least 24 hours before it ends and you won’t be charged. After that it renews automatically until you cancel, and the price is shown in the app before you subscribe.</p>
+{% else %}
+        <p>Recimama is free to download, with an optional subscription, Recimama Pro. It renews automatically until you cancel, and the price is shown in the app before you subscribe.</p>
+{% endif %}
+        <ul class="pro-list">
+          <li><strong>Cook several dishes on one timeline.</strong> One clock for the whole meal, so every dish lands on the table together.</li>
+          <li><strong>Suggest a week.</strong> A week of dinners picked from your own recipes, put straight onto the plan.</li>
+          <li><strong>Use your own step times.</strong> Recimama notices when a step keeps taking you a different time from the recipe; with Pro, one tap re-plans the timeline around your usual times.</li>
+          <li><strong>Cook it with someone.</strong> The timeline re-planned for two people, with every step given to one of you.</li>
+          <li><strong>What can I do the night before?</strong> Which steps can be done the day before, and how short the evening becomes.</li>
+        </ul>
+{%- comment -%}
+  The app's own two sentences, as its paywall lists them beside the features since 2026-09-30:
+  ProTerms.familySharing and ProTerms.whatIsKept (RecipeKit/Sources/RecipeKit/Pro/ProTerms.swift,
+  worktree pro-upgrade). Word for word; only the apostrophes are the page's curly ones, as everywhere else
+  on the site (the lead's call, 2026-10-01 — the words are what must match ProTerms, not the typography).
+{%- endcomment %}
+        <ul class="ticks pro-notes">
+          <li>Family Sharing is on: up to five other people in your family group can use Pro too, at no extra cost.</li>
+          <li>If Pro ends, nothing you’ve made goes away: a meal already cooking finishes, step times you’ve applied stay applied, and your plans stay on the calendar.</li>
+        </ul>
+{% if site.pro_trial %}
+        <p class="aside">Subscribing removes the ads, and so does a free trial or a family share while it lasts. Without Pro, Recimama shows a few ads on its browsing screens, such as the recipe list, search and the meal plan, and never while you cook. Ads are not personalised.</p>
+{% else %}
+        <p class="aside">Subscribing removes the ads, and so does a family share while it lasts. Without Pro, Recimama shows a few ads on its browsing screens, such as the recipe list, search and the meal plan, and never while you cook. Ads are not personalised.</p>
+{% endif %}
+      </div>
+      <div class="shots shots-mixed">
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/08-suggest-a-week-days.webp">
+            <img class="crop" src="/assets/screens/08-suggest-a-week-days.jpg" width="600" height="808" loading="lazy" alt="Suggest a week, a Pro feature: dinners suggested for today, tomorrow, Thursday and Friday, Chicken and Potato Traybake, Thai Green Curry, Red Lentil Dal and Roast Root Vegetables, each with its hands-on minutes and a Not this option.">
+          </picture>
+          <figcaption><span class="pro">Pro</span> Suggest a week, from your own recipes.</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source type="image/webp" srcset="/assets/screens/11-two-cooks.webp">
+            <img class="crop" src="/assets/screens/11-two-cooks.jpg" width="600" height="557" loading="lazy" alt="Splitting the work for Spaghetti Carbonara, a Pro feature: each step given to You or Them, with when to start it, from at once to 33 minutes in.">
+          </picture>
+          <figcaption><span class="pro">Pro</span> Two cooks, every step given to one of you.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="soon" aria-labelledby="soon-title">
+  <div class="wrap">
+    <div class="closing-card">
+      <img class="closing-icon" src="/assets/icons/icon-192.png" width="80" height="80" alt="" loading="lazy">
+      <h2 id="soon-title">Coming soon to the App Store</h2>
+      <p class="closing-sub">For iPhone, iPad and Apple Watch. Free to download, with an optional subscription.</p>
+      <div class="closing-notes">
+        <div>
+          <h3>No account to create</h3>
+          <p>Your recipes stay on your devices and in your own iCloud.</p>
+        </div>
+        <div>
+          <h3>Made by one person</h3>
+          <p>Recimama is made by David Rodriguez, and every email is read: <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
