@@ -1,0 +1,1037 @@
+/* Recimama site palette.
+ * Card colours: the app's own swatches, RecipeKit/Sources/RecipeKit/Support/Palette.swift:42-74 (main).
+ *   --c-NAME        the app's accent (fills: bars, chips, dots). Not for small text.
+ *   --c-NAME-text   text-safe on this site's --bg, --surface and --band (>= 4.5:1, measured).
+ *                   Derived the app's way (CardColor.swift:97-106): hue and saturation kept, brightness
+ *                   moved 1% at a time. Where the app's own `legible` already passes here it is used as is.
+ *   --c-NAME-ink    black or white text ON the accent fill, whichever measures higher (all >= 4.95:1).
+ * Attention colours (the timeline's three bars) follow Attention.chartPalette, CardColor.swift:288-294:
+ *   hands on = tomato, keep an eye on it = carrot, looks after itself = ocean.
+ * Neutrals are taken from the app icon (background #22261C -> #12140E, cream bar #EEECE4).
+ * Every text pairing is listed with its ratio in manifest.json > palette.checks. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #FAF8F2;
+  --surface: #FFFFFF;
+  --band: #F2EFE6;
+  --text: #1A1D15;
+  --muted: #565A4C;
+  --border: #DEDAD0;
+  --brand: #F0B429;          /* the icon's honey bar; a fill, with --brand-ink on it (9.16:1) */
+  --brand-ink: #1A1D15;
+  --link: #896700;
+  --focus: #2C6E9E;
+  --icon-bg-top: #22261C; --icon-bg-bottom: #12140E; --icon-cream: #EEECE4; --icon-tomato: #ED6556;
+  --c-tomato: #E04B3C; --c-tomato-text: #BF4033; --c-tomato-ink: #000000;
+  --c-carrot: #E07A1F; --c-carrot-text: #A35917; --c-carrot-ink: #000000;
+  --c-honey: #C99700; --c-honey-text: #896700; --c-honey-ink: #000000;
+  --c-olive: #7A8B2E; --c-olive-text: #647226; --c-olive-ink: #000000;
+  --c-basil: #2E8B57; --c-basil-text: #28794C; --c-basil-ink: #000000;
+  --c-sage: #5F8A7D; --c-sage-text: #4F7368; --c-sage-ink: #000000;
+  --c-ocean: #2C6E9E; --c-ocean-text: #2C6E9E; --c-ocean-ink: #FFFFFF;
+  --c-plum: #6B4E9E; --c-plum-text: #6B4E9E; --c-plum-ink: #FFFFFF;
+  --c-berry: #B03060; --c-berry-text: #B03060; --c-berry-ink: #FFFFFF;
+  --c-cocoa: #6B4A3A; --c-cocoa-text: #6B4A3A; --c-cocoa-ink: #FFFFFF;
+  --c-slate: #4A5568; --c-slate-text: #4A5568; --c-slate-ink: #FFFFFF;
+  --attn-hands-on: var(--c-tomato); --attn-eye: var(--c-carrot); --attn-self: var(--c-ocean);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11130D;
+    --surface: #1A1D15;
+    --band: #22261C;
+    --text: #EEECE4;
+    --muted: #B4B2A6;
+    --border: #3A3E31;
+    --brand: #F0B429;          /* the icon's honey bar; a fill, with --brand-ink on it (9.16:1) */
+    --brand-ink: #1A1D15;
+    --link: #F0B429;
+    --focus: #7DB8E8;
+    --icon-bg-top: #22261C; --icon-bg-bottom: #12140E; --icon-cream: #EEECE4; --icon-tomato: #ED6556;
+    --c-tomato: #FF6B5B; --c-tomato-text: #FF6B5B; --c-tomato-ink: #000000;
+    --c-carrot: #FF9A3C; --c-carrot-text: #FF9A3C; --c-carrot-ink: #000000;
+    --c-honey: #F0B429; --c-honey-text: #F0B429; --c-honey-ink: #000000;
+    --c-olive: #A3B84A; --c-olive-text: #A3B84A; --c-olive-ink: #000000;
+    --c-basil: #4CB87A; --c-basil-text: #4CB87A; --c-basil-ink: #000000;
+    --c-sage: #85B3A5; --c-sage-text: #85B3A5; --c-sage-ink: #000000;
+    --c-ocean: #4E9BD1; --c-ocean-text: #4E9BD1; --c-ocean-ink: #000000;
+    --c-plum: #9A7FD1; --c-plum-text: #9A7FD1; --c-plum-ink: #000000;
+    --c-berry: #E05C8A; --c-berry-text: #E35D8C; --c-berry-ink: #000000;
+    --c-cocoa: #A0765F; --c-cocoa-text: #AF8268; --c-cocoa-ink: #000000;
+    --c-slate: #8A94A6; --c-slate-text: #8A94A6; --c-slate-ink: #000000;
+    --attn-hands-on: var(--c-tomato); --attn-eye: var(--c-carrot); --attn-self: var(--c-ocean);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Site styles. System fonts only: nothing is fetched from anywhere else.
+   ------------------------------------------------------------------ */
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --shadow: 0 1px 2px rgb(26 29 21 / .06), 0 18px 40px -18px rgb(26 29 21 / .28);
+  --lift: 0 2px 6px rgb(26 29 21 / .10), 0 30px 60px -22px rgb(26 29 21 / .40);
+  --radius: 1rem;
+  /* Motion: one easing for things arriving, one with a little overshoot for the small badges. */
+  --ease-in-view: cubic-bezier(.22, .61, .36, 1);
+  --ease-pop: cubic-bezier(.34, 1.56, .64, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow: 0 1px 2px rgb(0 0 0 / .4), 0 18px 40px -18px rgb(0 0 0 / .7);
+    --lift: 0 2px 8px rgb(0 0 0 / .5), 0 30px 60px -22px rgb(0 0 0 / .95);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 1rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1.0625rem/1.6 var(--font);
+  overflow-wrap: break-word;
+  /* A short page (support) still ends with the footer at the bottom of the window. */
+  min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+}
+main { flex: 1 0 auto; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 .6em; text-wrap: balance; }
+p { margin: 0 0 1em; }
+p, li, figcaption { text-wrap: pretty; }
+a { color: var(--link); text-underline-offset: .18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+main:focus { outline: none; }
+
+.wrap { width: min(100% - 2.5rem, 72rem); margin-inline: auto; }
+
+.sr {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  background: var(--surface); color: var(--text); padding: .6rem 1rem;
+  border-radius: .5rem; font-weight: 600;
+}
+/* The shadow only while it shows: parked above the page, it would still cast one onto the top edge. */
+.skip-link:focus { top: 1rem; box-shadow: var(--shadow); }
+
+/* Header and footer ------------------------------------------------- */
+
+.site-header { border-bottom: 1px solid var(--border); }
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  column-gap: 1.5rem; row-gap: .25rem; min-height: 4.25rem; padding-block: .5rem;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: .6rem;
+  color: var(--text); text-decoration: none; font-weight: 750; font-size: 1.2rem; letter-spacing: -0.01em;
+}
+.brand img { width: 2.25rem; height: 2.25rem; border-radius: 22%; }
+/* The icon is dark itself, so on the dark page a hairline keeps its edge. */
+@media (prefers-color-scheme: dark) { .brand img, .closing-icon { box-shadow: 0 0 0 1px var(--border); } }
+.site-nav ul, .footer-links { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-nav a { color: var(--text); text-decoration: none; font-weight: 550; font-size: .975rem; padding-block: .5rem; display: inline-block; }
+@media (max-width: 30rem) { .site-nav .nav-how { display: none; } }
+.site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 3px; text-underline-offset: .35em; }
+
+.site-footer { border-top: 1px solid var(--border); background: var(--band); font-size: .95rem; }
+.footer-inner {
+  display: grid; gap: 1rem 2rem; padding-block: 2.5rem 3rem;
+  grid-template-columns: 1fr;
+}
+.footer-inner p { margin: 0; }
+.brand-small { font-size: 1.05rem; }
+.brand-small img { width: 1.75rem; height: 1.75rem; }
+.footer-links a[aria-current="page"] { font-weight: 700; }
+.footer-copy, .footer-contact { color: var(--muted); }
+@media (min-width: 52rem) {
+  .footer-inner { grid-template-columns: auto 1fr auto; align-items: center; }
+  .footer-links { justify-content: center; }
+  .footer-contact { grid-column: 1 / 3; }
+  .footer-copy { grid-column: 3; grid-row: 2; text-align: right; }
+}
+
+/* Shared type -------------------------------------------------------- */
+
+.eyebrow {
+  display: flex; align-items: center; gap: .6rem;
+  font-size: .8125rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--c-honey-text); margin-bottom: 1rem;
+}
+/* Apple's product names keep their own form, so this eyebrow is never set in capitals
+   (all-caps would print "IPHONE" and "IPAD"). */
+.hero .eyebrow { text-transform: none; letter-spacing: .01em; font-size: .9375rem; }
+.step-no {
+  display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%;
+  background: var(--brand); color: var(--brand-ink); letter-spacing: 0; font-size: .875rem;
+}
+.aside { color: var(--muted); font-size: .95rem; border-left: 3px solid var(--border); padding-left: 1rem; }
+/* `position: relative; overflow: hidden` belongs here, NOT in the reduced-motion block with the
+   shimmer that uses it: a non-visible overflow on an inline-block moves its baseline to the bottom
+   margin edge, which grows the line box by 2px. Kept out here, the chip measures the same in every
+   motion mode, so flipping the system switch mid-visit cannot reflow the page. */
+.pro {
+  display: inline-block; position: relative; overflow: hidden;
+  vertical-align: .1em; margin-inline: .15em;
+  padding: .12em .5em; border-radius: .4em; background: var(--c-plum); color: var(--c-plum-ink);
+  font-size: .72em; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; line-height: 1.35;
+}
+
+/* Hero ---------------------------------------------------------------- */
+
+.hero { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+/* Wide screens: the headline and the intro side by side, so the timeline below is in the first view. */
+@media (min-width: 64rem) {
+  .hero-head { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(3rem, 5vw, 5rem); align-items: end; }
+  .hero-head h1 { margin-bottom: 0; }
+  .hero-intro .lede { font-size: 1.25rem; }
+  .hero-intro .soon { margin-top: 1.25rem; }
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 1.4rem + 5vw, 5rem); font-weight: 800; letter-spacing: -0.028em;
+  line-height: 1.02; max-width: 13ch; margin-bottom: .35em;
+}
+.lede { font-size: clamp(1.125rem, 1rem + .6vw, 1.375rem); line-height: 1.5; max-width: 38rem; color: var(--text); }
+.soon { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin: 1.75rem 0 0; }
+/* A status line, not a button: nothing to press until the app is out. */
+.soon-badge { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; }
+.soon-badge::before { content: ""; flex: none; width: .6rem; height: .6rem; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
+.soon-note { color: var(--muted); font-size: .975rem; }
+
+/* The meal timeline. It always wears the icon's dark colours, in light and dark mode alike. */
+.meal {
+  --text: #EEECE4; --muted: #B4B2A6; --card: #1A1D15;
+  --c-carrot: #FF9A3C; --c-honey: #F0B429; --c-basil: #4CB87A;
+  --line: #ED6556; --line-text: #FF6B5B;
+  --label-w: 11rem; --gap: 1rem;
+  margin: clamp(2.25rem, 5vw, 3.5rem) 0 0;
+  padding: clamp(1.25rem, 3.5vw, 2.5rem);
+  color: var(--text);
+  background: linear-gradient(180deg, #22261C 0%, #161912 100%);
+  border: 1px solid #3A3E31;
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow);
+}
+/* On the dark page the card would be nearly the page's own colour, so there it is lifted a step
+   (every chart text colour still measures 4.9:1 or better on #2A2F22). */
+@media (prefers-color-scheme: dark) {
+  .meal {
+    background: linear-gradient(180deg, #2A2F22 0%, #1D2118 100%);
+    border-color: #4A4F40;
+    box-shadow: 0 0 0 1px rgb(240 180 41 / .06), 0 28px 60px -28px rgb(0 0 0 / .95);
+  }
+}
+.meal :focus-visible { outline-color: #7DB8E8; }
+.meal-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem 2rem; margin-bottom: 1.75rem; }
+.meal-kicker { margin: 0 0 .3rem; color: var(--muted); font-size: .95rem; }
+.meal-title { margin: 0; font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem); font-weight: 750; letter-spacing: -0.02em; line-height: 1.2; color: #F0B429; text-wrap: balance; }
+.meal-stats { display: flex; gap: 2rem; margin: 0; }
+.meal-stats div { display: flex; flex-direction: column-reverse; }
+.meal-stats dt { color: var(--muted); font-size: .8125rem; }
+.meal-stats dd { margin: 0; font-weight: 700; font-size: 1.125rem; font-variant-numeric: tabular-nums; }
+
+.chart { position: relative; font-variant-numeric: tabular-nums; }
+.axis { position: relative; height: 1.75rem; margin-left: calc(var(--label-w) + var(--gap)); color: var(--muted); font-size: .8125rem; }
+.axis span { position: absolute; top: 0; left: calc(var(--t) / var(--span) * 100%); transform: translateX(-50%); }
+.axis span:first-child { transform: none; }
+.lanes { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.lane { display: grid; grid-template-columns: var(--label-w) minmax(0, 1fr); column-gap: var(--gap); align-items: center; }
+.lane-name { margin: 0; display: flex; flex-direction: column; font-weight: 650; font-size: .975rem; line-height: 1.25; }
+.lane-name small { color: var(--muted); font-weight: 400; font-size: .8125rem; }
+.lane-you { margin-top: .6rem; padding-top: 1rem; border-top: 1px dashed #3A3E31; }
+.track {
+  position: relative; height: 2.5rem; list-style: none; margin: 0; padding: 0;
+  border-radius: 999px; background: rgb(238 236 228 / .05);
+  container-type: inline-size;
+}
+.bar {
+  position: absolute; top: .3rem; bottom: .3rem;
+  left: calc(var(--s) / var(--span) * 100%);
+  width: calc(var(--d) / var(--span) * 100% - 3px);
+  border-radius: 999px;
+  display: flex; align-items: center; padding-inline: .5rem; overflow: hidden; white-space: nowrap;
+  font-size: .8125rem; font-weight: 650; line-height: 1;
+}
+.bar.hands, .key.hands { background: var(--c, #EEECE4); color: #1A1D15; }
+.bar.eye, .key.eye {
+  background: #3A3E31;
+  background: repeating-linear-gradient(-45deg, var(--c, #EEECE4) 0 .3rem, color-mix(in srgb, var(--c, #EEECE4) 30%, #1A1D15) .3rem .6rem);
+  color: #1A1D15;
+}
+.bar.self, .key.self {
+  background: #2A2F22;
+  background: color-mix(in srgb, var(--c, #EEECE4) 18%, #1A1D15);
+  box-shadow: inset 0 0 0 1.5px var(--c, #EEECE4);
+  color: var(--text);
+}
+/* Each bar is its own container, so a step's name shows only where it fits in its bar.
+   fit-N is the room that name needs, measured: at 390 px "Roasts" and "Boils" show, at 1440 px all do. */
+.bar { container: bar / inline-size; }
+.bar .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.bar.eye .label { background: #1A1D15; color: var(--text); padding: .2rem .45rem; border-radius: 999px; }
+@container bar (min-width: 1.85rem) { .label.fit-2 { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+@container bar (min-width: 3.05rem) { .label.fit-3 { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+@container bar (min-width: 3.8rem)  { .label.fit-4 { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+@container bar (min-width: 4.9rem)  { .label.fit-5 { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+@container bar (min-width: 6.1rem)  { .label.fit-6 { position: static; width: auto; height: auto; overflow: visible; clip-path: none; } }
+.gap {
+  position: absolute; top: 0; bottom: 0;
+  left: calc(var(--s) / var(--span) * 100%); width: calc(var(--d) / var(--span) * 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: .8125rem; white-space: nowrap;
+}
+.gap-long { display: none; }
+@container (min-width: 26rem) { .gap-long { display: inline; white-space: pre; } }
+
+.chart-grid {
+  position: absolute; top: 0; bottom: 0; right: 0; left: calc(var(--label-w) + var(--gap));
+  pointer-events: none; overflow: hidden;
+  background-image: linear-gradient(to right, rgb(238 236 228 / .12) 1px, transparent 1px);
+  background-size: calc(100% / 3) 100%;
+}
+.dinner { position: absolute; inset: 0; }
+.dinner::after {
+  content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 2px;
+  background: var(--line); border-radius: 2px;
+}
+.dinner span {
+  position: absolute; top: 0; right: .5rem; line-height: 1.35;
+  color: var(--line-text); font-weight: 750; font-size: .875rem; white-space: nowrap;
+}
+
+.meal-foot { display: grid; gap: 1rem 2.5rem; margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid #3A3E31; }
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; list-style: none; margin: 0; padding: 0; font-size: .875rem; }
+.legend li { display: inline-flex; align-items: center; gap: .5rem; }
+.key { display: inline-block; width: 1.75rem; height: .9rem; border-radius: 999px; }
+.meal-caption { margin: 0; color: var(--muted); font-size: .9375rem; line-height: 1.55; max-width: 48rem; }
+@media (min-width: 64rem) { .meal-foot { grid-template-columns: auto 1fr; align-items: start; } .legend { flex-direction: column; } }
+
+/* The sweep: the bars appear behind the red line as it runs to dinner time.
+   Without motion (or without animation support) the finished chart is simply there.
+   With the script, the card waits for the same observer as everything else and plays once it has
+   arrived (site.js adds `play`); with no script at all it plays on load, as it always did. */
+@media (prefers-reduced-motion: no-preference) {
+  .meal.play .track, html:not(.js-anim) .track { animation: chart-draw 2.6s cubic-bezier(.45, .05, .35, 1) .3s both; }
+  .meal.play .dinner, html:not(.js-anim) .dinner { animation: sweep 2.6s cubic-bezier(.45, .05, .35, 1) .3s both; }
+  .meal.play .dinner span, html:not(.js-anim) .dinner span { animation: appear .5s ease-out 2.8s both; }
+
+  /* Inside the card, once it plays: the meal's numbers, then each row's name as the line passes it,
+     then the key. `both` fill is what hides them, and only while their own animation waits to
+     start — so with no `play` class nothing is hidden and the card is simply finished. */
+  .meal.play .meal-kicker, .meal.play .meal-title,
+  .meal.play .meal-stats div, .meal.play .lane-name, .meal.play .legend li {
+    animation: appear-up .55s var(--ease-in-view) both;
+  }
+  .meal.play .meal-kicker { animation-delay: .05s; }
+  .meal.play .meal-title { animation-delay: .12s; }
+  .meal.play .meal-stats div:nth-child(1) { animation-delay: .2s; }
+  .meal.play .meal-stats div:nth-child(2) { animation-delay: .28s; }
+  .meal.play .lane:nth-child(1) .lane-name { animation-delay: .3s; }
+  .meal.play .lane:nth-child(2) .lane-name { animation-delay: .6s; }
+  .meal.play .lane:nth-child(3) .lane-name { animation-delay: .9s; }
+  .meal.play .lane:nth-child(4) .lane-name { animation-delay: 1.2s; }
+  .meal.play .legend li:nth-child(1) { animation-delay: 1.3s; }
+  .meal.play .legend li:nth-child(2) { animation-delay: 1.4s; }
+  .meal.play .legend li:nth-child(3) { animation-delay: 1.5s; }
+}
+@keyframes chart-draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes appear-up { from { opacity: 0; transform: translateY(.6rem); } to { opacity: 1; transform: none; } }
+@keyframes sweep { from { transform: translateX(-100%); } to { transform: none; } }
+@keyframes appear { from { opacity: 0; transform: translateY(.25rem); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 40rem) {
+  .meal { --label-w: 0rem; --gap: 0rem; }
+  .lane { grid-template-columns: minmax(0, 1fr); row-gap: .35rem; }
+  .lane-name { flex-direction: row; align-items: baseline; gap: .5rem; font-size: .9375rem; }
+  .track { height: 2.1rem; }
+  .bar { top: .25rem; bottom: .25rem; }
+  .meal-stats { gap: 1.5rem; }
+  /* On a phone the caption keeps its first and last sentence on screen; the middle one,
+     the arithmetic, is still read out by screen readers. */
+  .cap-more { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+@media (max-width: 26rem) { .axis-630 { display: none; } }
+
+/* Sections -------------------------------------------------------------- */
+
+.step { padding-block: clamp(3.5rem, 9vw, 7rem); }
+.band { background: var(--band); }
+.step h2 { font-size: clamp(1.875rem, 1.2rem + 2.6vw, 3rem); font-weight: 780; letter-spacing: -0.022em; }
+.step h3 { font-size: clamp(1.3rem, 1.1rem + .9vw, 1.75rem); font-weight: 720; margin-top: 0; }
+.feature-text h3:not(:first-child) { margin-top: 1.75rem; }
+.feature { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.feature + .feature { margin-top: clamp(4rem, 9vw, 7rem); }
+.feature-text { max-width: 34rem; }
+@media (min-width: 58rem) {
+  .feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+  .feature-flip { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .feature-flip .feature-text { order: 2; }
+}
+
+/* The app's own attention colours, as used in screenshot 02 (CardColor.swift:288-294). */
+.key-intro { margin-bottom: .6rem; }
+.attn-key { list-style: none; margin: 0 0 1.25rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .9375rem; font-weight: 600; }
+.attn-key li { display: inline-flex; align-items: center; gap: .5rem; }
+.attn-swatch { flex: none; width: 1.5rem; height: .75rem; border-radius: .3rem; }
+.attn-hands { background: var(--attn-hands-on); }
+.attn-eye { background: var(--attn-eye); }
+.attn-self { background: var(--attn-self); }
+
+.ticks { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; gap: .55rem; }
+.ticks li { position: relative; padding-left: 1.75rem; }
+.ticks li::before {
+  content: ""; position: absolute; left: 0; top: .45em; width: 1rem; height: .5rem; border-radius: 999px;
+  background: var(--brand);
+}
+
+/* Screenshots: plain rounded rectangles, no device drawing. */
+.shots { display: flex; justify-content: center; align-items: flex-start; gap: clamp(.75rem, 3vw, 2rem); }
+.shot { margin: 0; flex: 0 1 18.75rem; min-width: 0; container-type: inline-size; }
+/* Out here with the geometry, not in the motion block that needs it, for the same reason as .pro. */
+.shot picture { display: block; position: relative; }
+.shots > .shot:nth-child(2) { margin-top: clamp(1.75rem, 8vw, 4.5rem); }
+.shot img {
+  width: 100%; background: #FFFFFF;
+  border-radius: 1.25rem; border-radius: 7cqi;
+  box-shadow: 0 0 0 1px var(--border), var(--shadow);
+}
+.shot img.crop { border-radius: .9rem; border-radius: 4cqi; }
+.shot figcaption { margin-top: .9rem; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: center; }
+.shots-mixed { align-items: center; }
+.shots-mixed > .shot:nth-child(2) { margin-top: 0; }
+.shot-cards { flex-basis: 25rem; }
+/* One crop on its own gets a little more room than half of a pair. */
+.shots-single > .shot { flex-basis: 22rem; }
+.shot-wide { max-width: 37.5rem; width: 100%; margin: 0 auto; }
+.shot-wide img { border-radius: 1.25rem; border-radius: 3.7cqi; }
+/* Phones: a pair side by side would be about 170 px a shot, too small to read, so the pair
+   becomes a centred column. The first shot is shown at up to 19rem, the second at up to 15rem;
+   a pair of crops (.shots-mixed) keeps both at full size, and the library cards use the width. */
+@media (max-width: 34rem) {
+  .shots { flex-direction: column; align-items: center; gap: 2.25rem; }
+  .shots > .shot { flex: none; width: min(100%, 19rem); }
+  .shots > .shot:nth-child(2) { width: min(80%, 15rem); margin-top: 0; }
+  .shots-mixed > .shot:nth-child(2) { width: min(100%, 19rem); }
+  .shots > .shot.shot-cards { width: min(100%, 25rem); }
+}
+/* The Apple Watch pair (#watch): the App Store's 46 mm captures, 416 x 496, shown at half size (2x)
+   like every other shot, so a smaller pair than the phone's. On a phone they stack like any pair, but
+   both at their full half size: at 80% the second would drop below 2x for no gain. */
+.shot-watch { flex-basis: 13rem; }
+@media (max-width: 34rem) {
+  .shots > .shot.shot-watch { width: min(100%, 13rem); }
+}
+.feature-cook { grid-template-areas: "text" "shots" "wide"; }
+.feature-cook .feature-text { grid-area: text; }
+.feature-cook .shots { grid-area: shots; }
+.feature-cook .shot-wide { grid-area: wide; }
+@media (min-width: 58rem) {
+  .feature-cook { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "text shots" "wide shots"; row-gap: 3rem; }
+  .feature-cook .feature-text { align-self: end; }
+  .feature-cook .shot-wide { align-self: start; margin: 0; }
+}
+
+/* Pro: a card on the page's own background, not a full-width band. */
+.pro-card {
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+}
+.pro-card .feature-text { max-width: 36rem; }
+/* Two columns: side by side, the two crops were half the height of the text beside them and left
+   the card's upper right empty (at 58-64rem they shrank to about 210 px each). So wherever the card
+   has two columns, the text gets more width and the crops stack on a diagonal down the other
+   column, each at its full size. */
+@media (min-width: 58rem) {
+  .pro-card { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .pro-card .shots { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+  .pro-card .shots > .shot { flex: none; width: min(100%, 18.75rem); }
+  .pro-card .shots > .shot:nth-child(2) { align-self: flex-end; }
+}
+.pro-section + .closing { padding-top: 0; }
+.pro-list { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: .9rem; }
+.pro-list li { padding-left: 1.1rem; border-left: 3px solid var(--c-plum); }
+.pro-list strong { display: block; }
+/* The two terms under the features (Family Sharing, what is kept), in the app's words: the page's own
+   tick list, its mark in Pro's plum rather than honey, since both lines are about Pro. */
+.pro-notes { margin-bottom: 1.5rem; }
+.pro-notes li::before { background: var(--c-plum); }
+
+/* Closing */
+.closing { padding-block: clamp(3.5rem, 9vw, 7rem); }
+/* The band colour, so it doesn't read as a second white card straight after the Pro one. */
+.closing-card {
+  text-align: center; padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 4rem);
+  background: var(--band); border-radius: clamp(1.25rem, 3vw, 2rem);
+}
+.closing-icon { width: 5rem; height: 5rem; margin: 0 auto 1.5rem; border-radius: 22%; }
+.closing h2 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.75rem); font-weight: 780; letter-spacing: -0.022em; }
+.closing-sub { color: var(--muted); font-size: 1.125rem; max-width: 34rem; margin-inline: auto; }
+.closing-notes { display: grid; gap: 1.5rem 3rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: left; }
+.closing-notes h3 { font-size: 1.05rem; margin-bottom: .35em; }
+.closing-notes p { margin: 0; color: var(--muted); }
+@media (min-width: 48rem) { .closing-notes { grid-template-columns: 1fr 1fr; max-width: 52rem; margin-inline: auto; } }
+
+/* Markdown pages (privacy, support, guidelines ...) --------------------------- */
+
+.prose { max-width: 46rem; padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3.5rem, 8vw, 6rem); line-height: 1.65; }
+.prose h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem); font-weight: 800; letter-spacing: -0.022em; margin-bottom: .6em; }
+/* A short honey rule under the title, the icon's bar. */
+.prose h1::after { content: ""; display: block; width: 3rem; height: .35rem; margin-top: 1.1rem; border-radius: 1rem; background: var(--brand); }
+.prose li::marker { color: var(--c-honey-text); }
+.prose h2 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.625rem); font-weight: 720; margin: 2.5rem 0 .75rem; padding-top: 1.75rem; border-top: 1px solid var(--border); }
+.prose h3 { font-size: 1.15rem; margin: 1.75rem 0 .5rem; }
+.prose h1 + p > em:only-child { color: var(--muted); font-style: normal; font-size: .95rem; }
+.prose ul, .prose ol { padding-left: 1.4rem; margin: 0 0 1.1em; }
+.prose li { margin-bottom: .4em; }
+.prose li > ul { margin-top: .4em; }
+.prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+.prose hr + h2 { border-top: 0; padding-top: 0; }
+.prose strong { font-weight: 700; }
+.prose code { font-size: .9em; background: var(--band); padding: .1em .35em; border-radius: .3em; }
+.table-wrap {
+  overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--border); border-radius: .75rem;
+  /* Scroll shadows: an edge darkens only while there is more table beyond it. */
+  --edge: rgb(0 0 0 / .18);
+  background:
+    linear-gradient(to right, var(--surface) 40%, transparent) left / 2.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--surface) 40%, transparent) right / 2.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--edge), transparent) left / .9rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--edge), transparent) right / .9rem 100% no-repeat scroll,
+    var(--surface);
+}
+@media (prefers-color-scheme: dark) { .table-wrap { --edge: rgb(238 236 228 / .16); } }
+.table-wrap table { border-collapse: collapse; width: 100%; min-width: 32rem; font-size: .9375rem; line-height: 1.5; }
+.table-wrap th, .table-wrap td { text-align: left; vertical-align: top; padding: .7rem .9rem; border-bottom: 1px solid var(--border); }
+.table-wrap th { background: var(--band); font-weight: 700; }
+.table-wrap tr:last-child td { border-bottom: 0; }
+/* With site.js (optional), a narrow screen shows each row as a card, each cell headed by its column. */
+@media (max-width: 40rem) {
+  .table-wrap.can-stack { overflow: visible; border: 0; border-radius: 0; background: none; }
+  .can-stack table { min-width: 0; }
+  .can-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .can-stack tbody, .can-stack tr, .can-stack td { display: block; }
+  .can-stack tr { background: var(--surface); border: 1px solid var(--border); border-radius: .75rem; margin-bottom: .75rem; overflow: hidden; }
+  .can-stack td, .can-stack tr:last-child td { border-bottom: 0; padding: .6rem .9rem; }
+  .can-stack td + td { border-top: 1px solid var(--border); }
+  .can-stack td:first-child { background: var(--band); }
+  .can-stack td::before {
+    content: attr(data-label); content: attr(data-label) / "";
+    display: block; margin-bottom: .1rem; color: var(--muted); font-size: .8125rem; font-weight: 700;
+  }
+}
+
+/* Arriving as you scroll -------------------------------------------------------------------
+   Everything below needs two things at once: the reader has not asked for reduced motion, and
+   assets/site.js has added `js-anim` to <html>. So with motion turned down, or with JavaScript
+   off, nothing here applies: no section is hidden, nothing moves, every animated thing shows its
+   finished state. Each thing is put back by the `in` class the script adds as its box scrolls into
+   view, after waiting its own `--rd` (also set by the script), which is what staggers a section.
+
+   Only transform and opacity change, so nothing reflows and no text shifts while it is read.
+   The list of hidden things below is the list of groups in site.js: keep the two together.
+
+   The five drawn stories (see "DRAWN STORIES" further down) ride along in here: each one is a
+   <figure class="story-fig"> inside a .feature-text, so the rule below reveals it with the words
+   around it, and it needs no group of its own. What it does need is `play`, which site.js adds
+   separately once the drawing itself is a quarter on screen. */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* The way in. Read off the `in` state, so this is also what the transition uses. */
+  .js-anim .in {
+    transition: opacity .8s var(--ease-in-view), transform .9s var(--ease-in-view);
+    transition-delay: var(--rd, 0s);
+  }
+
+  /* Hidden until the script says so: headings, paragraphs, list items, the chart card. */
+  .js-anim .hero-title > *:not(h1):not(.in),
+  .js-anim .hero h1 > .w:not(.in),
+  .js-anim .hero-intro > *:not(.in),
+  .js-anim .meal:not(.in),
+  .js-anim .feature-text > *:not(ul):not(ol):not(.in),
+  .js-anim .feature-text > ul > li:not(.in),
+  .js-anim .closing-card > *:not(.closing-notes):not(.in),
+  .js-anim .closing-notes > *:not(.in) {
+    opacity: 0;
+    transform: translateY(1.1rem);
+  }
+
+  /* The screenshots: a touch further down, and a touch smaller, so they settle after their words. */
+  .js-anim .shots > .shot:not(.in),
+  .js-anim .shot-wide:not(.in) {
+    opacity: 0;
+    transform: translateY(1.6rem) scale(.985);
+  }
+
+  /* The headline, word by word. Whole words rise, so the line never rewraps. */
+  .js-anim .hero h1 > .w { display: inline-block; }
+  .js-anim .hero h1 > .w:not(.in) { transform: translateY(.5em); }
+
+  /* The app icon on the closing card comes up a little smaller and grows into place. */
+  .js-anim .closing-card > .closing-icon:not(.in) { transform: translateY(1.1rem) scale(.9); }
+
+  /* The numbered badge on a section's eyebrow pops in just behind its words. */
+  .js-anim .eyebrow .step-no {
+    transition: transform .55s var(--ease-pop), opacity .3s ease-out;
+    transition-delay: calc(var(--rd, 0s) + .14s);
+  }
+  .js-anim .eyebrow:not(.in) .step-no { opacity: 0; transform: scale(.4); }
+
+  /* The small colour swatches draw out from their left edge. */
+  .js-anim .attn-key .attn-swatch, .js-anim .ticks li::before {
+    transform-origin: left center;
+    transition: transform .5s var(--ease-in-view);
+    transition-delay: calc(var(--rd, 0s) + .1s);
+  }
+  .js-anim .attn-key li:not(.in) .attn-swatch,
+  .js-anim .ticks li:not(.in)::before { transform: scaleX(.2); }
+
+  /* Each Pro point's plum rule draws downwards. The border itself steps aside for a bar that can
+     be drawn; with no script the border is the one you see. */
+  .js-anim .pro-list li { position: relative; border-left-color: transparent; }
+  .js-anim .pro-list li::before {
+    content: ""; position: absolute; left: -3px; top: 0; bottom: 0; width: 3px;
+    border-radius: 3px; background: var(--c-plum);
+    transform-origin: top center;
+    transition: transform .6s var(--ease-in-view);
+    transition-delay: calc(var(--rd, 0s) + .08s);
+  }
+  .js-anim .pro-list li:not(.in)::before { transform: scaleY(0); }
+
+  /* A screenshot lifts and tilts a touch under the pointer (or if anything in it takes focus).
+     The deeper shadow is a layer of its own, faded in, so only transform and opacity animate. */
+  .shot picture::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    border-radius: 7cqi; box-shadow: var(--lift); opacity: 0;
+    transition: opacity .35s ease-out;
+  }
+  .shot:has(img.crop) picture::after { border-radius: 4cqi; }
+  .shot-wide picture::after { border-radius: 3.7cqi; }
+  .shot img { transition: transform .35s var(--ease-in-view); }
+  .shot:hover img, .shot:focus-within img { transform: translateY(-.5rem) rotate(-.5deg) scale(1.012); }
+  .shot:hover picture::after, .shot:focus-within picture::after { opacity: 1; }
+  .shot-wide:hover img, .shot-wide:focus-within img { transform: translateY(-.5rem) rotate(.3deg) scale(1.008); }
+
+  /* The icon in the header turns a little when you point at the name. */
+  .brand img { transition: transform .4s var(--ease-pop); }
+  .brand:hover img, .brand:focus-visible img { transform: rotate(-4deg) scale(1.06); }
+
+  /* The Coming soon dot breathes while it is on screen. site.js adds `live` only while the badge is
+     in view and `tab-hidden` when the tab goes away, so it never runs unseen or beside your reading. */
+  .js-anim .soon.live .soon-badge::before { animation: soon-pulse 3s ease-in-out .8s infinite; }
+  .js-anim.tab-hidden .soon.live .soon-badge::before { animation-play-state: paused; }
+}
+
+@keyframes soon-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(1.35); opacity: .75; }
+}
+
+/* The header sits above the page's own bands, so its bottom line is never painted over. It does not
+   stick, so there is no shadow to fade in as the page moves: it scrolls away with its own line. */
+.site-header { position: relative; z-index: 2; }
+
+@media print {
+  .site-header nav, .skip-link { display: none; }
+  .meal { break-inside: avoid; }
+}
+
+/* ============================================================================================
+   DRAWN STORIES — the app acted out, beside the screenshots
+   --------------------------------------------------------------------------------------------
+   Each `.story` is a small drawing of one of the app's screens, built out of divs: the ingredient
+   list ticking itself off, two dishes sliding onto one timeline, a cook-along step finishing, a
+   week filling up, a foldable opening like a book. They sit beside the real screenshots and never
+   replace one. Every word in them is the app's own (App/Views/WelcomeTourView.swift's own example
+   timeline — Boil water, Fry bacon, Whisk eggs, Cook pasta, Toss together — CookAlongView's
+   "Alerts set — you can put the phone down." and "Done — next step", ShoppingListView's "Amounts
+   are added together" and "to get", CookSplit.Pane's own three names — "What's coming",
+   "Timeline", "Ingredients for this step" — and the two real totals from screenshot 05).
+
+   Each drawing is aria-hidden; the figcaption beside it says the same thing in words, so nothing
+   here is the only way to learn anything.
+
+   READ THESE RULES BACKWARDS. The plain rules draw the FINISHED picture; each @keyframes rewinds
+   it to the beginning and plays it forward once. Every animation is written `paused`, and only
+   `.js-anim .story.play` (site.js: in view, tab visible) sets it running. So with reduced motion,
+   or with no script at all, no rule below applies and the drawing is the finished, still picture.
+
+   Every panel, row and swappable label has a fixed box, and everything that changes — a number, a
+   label, a card — is a layer stacked inside one, so nothing in a drawing can move anything else.
+   Only transform and opacity animate.
+
+   Each story plays once and rests. Nothing here loops: every one of them is a one-way fact (prep
+   before step 1, dishes coming together, a step finishing, a list filling) and replaying it would
+   mean running the clock backwards, which is the one thing the app is about. The page's only
+   endless movement stays the "Coming soon" dot.
+   ============================================================================================ */
+
+.story-fig { margin: 1.75rem 0 1.5rem; }
+.story-fig > figcaption { margin-top: .65rem; font-size: .8125rem; line-height: 1.5; color: var(--muted); }
+.story {
+  position: relative; overflow: hidden;
+  display: grid; gap: .5rem; align-content: start;
+  padding: .8rem .85rem .9rem;
+  border: 1px solid var(--border); border-radius: .9rem;
+  background: var(--surface);
+  font-size: .8125rem; line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+.story p, .story ul, .story ol, .story li { margin: 0; }
+.story ul, .story ol { list-style: none; padding: 0; }
+.story em { font-style: normal; }
+.story-head {
+  display: flex; justify-content: space-between; align-items: baseline; gap: .75rem;
+  font-weight: 700; padding-bottom: .45rem; border-bottom: 1px solid var(--border);
+}
+.story-meta { flex: none; color: var(--muted); font-weight: 400; font-size: .75rem; }
+.story-lab {
+  display: flex; justify-content: space-between; align-items: baseline; gap: .5rem;
+  color: var(--muted); font-size: .75rem; font-weight: 700;
+}
+.story-lab em { font-weight: 400; }
+/* A ticked circle, the same shape in every drawing. */
+.s-tick { flex: none; position: relative; width: 1rem; height: 1rem; border-radius: 999px; background: var(--c-basil); }
+.s-tick::after {
+  content: ""; position: absolute; left: .33rem; top: .21rem;
+  width: .26rem; height: .46rem; border: 1.5px solid var(--surface); border-top: 0; border-left: 0;
+  transform: rotate(40deg);
+}
+/* An empty box, with the tick that fills it drawn over the top. */
+.s-box { flex: none; position: relative; width: 1rem; height: 1rem; border-radius: .25rem; border: 1.5px solid var(--border); }
+.s-box .s-tick { position: absolute; left: -1.5px; top: -1.5px; border-radius: .25rem; }
+.s-box .s-tick::after { left: .31rem; top: .2rem; }
+
+/* 1. One recipe: the ingredients tick off, then the prep lights up, before step 1. -------------- */
+.s1-ing, .s1-prep { display: grid; gap: .28rem; }
+.s1-ing li { display: flex; align-items: center; gap: .45rem; }
+.s1-prep li { position: relative; display: flex; align-items: center; gap: .45rem; padding: .26rem .4rem; border-radius: .4rem; }
+.s1-hatch {
+  position: absolute; inset: 0; border-radius: .4rem; transform-origin: left center;
+  background: repeating-linear-gradient(45deg, rgb(240 180 41 / .30) 0 4px, rgb(240 180 41 / .07) 4px 9px);
+}
+.s1-prep li > span:not(.s1-hatch), .s1-prep li > em { position: relative; }
+.s1-prep em, .s1-step em { margin-left: auto; color: var(--muted); }
+.s1-step { display: flex; align-items: center; gap: .5rem; padding: .3rem .4rem; border: 1px solid var(--border); border-radius: .4rem; font-weight: 600; }
+.s1-no {
+  flex: none; display: grid; place-items: center; width: 1.05rem; height: 1.05rem; border-radius: 999px;
+  background: var(--brand); color: var(--brand-ink); font-size: .6875rem; font-weight: 800;
+}
+
+/* 2. A whole meal: two dishes slide onto one timeline and finish together. ----------------------- */
+.s2-mode { position: relative; height: 1.15rem; font-weight: 700; }
+.s2-mode > span { position: absolute; left: 0; top: 0; }
+.s2-chart { position: relative; height: 4.7rem; }
+.s2-move { position: absolute; inset: 0; }
+.s2-bar {
+  position: absolute; height: 1.5rem; border-radius: .4rem;
+  left: calc(var(--s) / 90 * 100%); width: calc(var(--d) / 90 * 100%);
+  display: flex; align-items: center; padding-inline: .4rem; overflow: hidden;
+  font-size: .75rem; font-weight: 700; white-space: nowrap;
+}
+.s2-bar1 { top: 0; background: var(--c-basil); color: var(--c-basil-ink); }
+.s2-bar2 { top: 1.85rem; background: var(--c-carrot); color: var(--c-carrot-ink); }
+.s2-finish { position: absolute; top: 0; bottom: 1.35rem; left: calc(70 / 90 * 100%); border-left: 2px dashed var(--text); }
+/* The label hangs to the LEFT of the dashed line, not the right: in the opening comparison the line
+   stands at 90 min, the chart's own right edge, and a label to its right would run off the card. */
+.s2-finish span { position: absolute; right: .3rem; top: 3.5rem; color: var(--muted); font-size: .6875rem; font-weight: 700; white-space: nowrap; }
+.s2-gain {
+  position: absolute; top: 0; height: 3.35rem; left: calc(70 / 90 * 100%); width: calc(20 / 90 * 100%);
+  transform-origin: left center; border-radius: .4rem;
+  /* A soft green wash, NOT the diagonal hatch: story 1 above has already taught the reader that a
+     hatched bar means prep, so the saved time has to look like something else. */
+  background: linear-gradient(to right, rgb(46 139 87 / .32), rgb(46 139 87 / .10));
+}
+.s2-totals { position: relative; height: 1.3rem; }
+.s2-totals span { position: absolute; left: 0; top: 0; font-size: 1.0625rem; font-weight: 800; }
+.s2-saved { display: flex; align-items: center; gap: .3rem; color: var(--c-basil-text); font-weight: 700; }
+/* A number that counts up: a strip of values sliding inside a window one value tall. The window
+   never moves. The drawing shows the LAST value (--n steps up from the first); the animation starts
+   at the first and steps up to it. */
+.s-count { display: inline-block; overflow: hidden; height: 1.35em; line-height: 1.35; }
+.s-count i { display: block; font-style: normal; transform: translateY(calc(var(--n, 0) * -1.35em)); }
+.s-count b { display: block; }
+
+/* 3. Cooking along: a step counts down, ticks done, the next one arrives, an alert lands. -------- */
+.s3-alert {
+  display: grid; gap: .05rem; padding: .45rem .6rem; border-radius: .6rem;
+  border: 1px solid var(--border); background: var(--band); box-shadow: var(--shadow);
+}
+.s3-alert b { font-size: .75rem; }
+.s3-alert em { color: var(--muted); font-size: .6875rem; }
+.s3-set { color: var(--muted); font-size: .75rem; }
+.s3-now { position: relative; height: 6rem; }
+.s3-card {
+  position: absolute; inset: 0; display: grid; gap: .25rem; align-content: start;
+  padding: .5rem .6rem .55rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--band);
+}
+.s3-k { color: var(--muted); font-size: .6875rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.s3-t { display: flex; align-items: center; gap: .4rem; font-weight: 700; font-size: .9375rem; }
+.s3-row { display: flex; align-items: center; gap: .3rem; }
+/* Shared with story 5: the same screen is being drawn, so the button and the progress bar under a
+   step have to look the same in both, and one rule is what guarantees it. */
+.s3-btn, .s5-btn { margin-left: auto; padding: .18rem .5rem; border-radius: 999px; background: var(--brand); color: var(--brand-ink); font-size: .6875rem; font-weight: 800; white-space: nowrap; }
+.s3-meter, .s5-meter { height: .3rem; border-radius: 999px; background: var(--border); overflow: hidden; }
+.s3-meter i, .s5-meter i { display: block; height: 100%; border-radius: 999px; background: var(--attn-hands-on); transform: scaleX(.86); transform-origin: left center; }
+/* The next step has only just started, so its meter is nearly empty. */
+.s3-card-b .s3-meter i { transform: scaleX(.07); }
+.s3-cardtick { position: absolute; right: .5rem; top: .5rem; }
+.s3-next { position: relative; height: 3.2rem; }
+.s3-next > ul { position: absolute; inset: 0; display: grid; gap: .3rem; align-content: start; }
+.s3-next li { display: flex; align-items: center; gap: .45rem; }
+.s3-in { flex: none; width: 4.1rem; color: var(--muted); font-size: .75rem; }
+/* An attention chip, in the app's own three colours. The ink is the palette's own ink for each
+   colour, which is what keeps it AA in both schemes — white on the hands-on red would not be. */
+.s-att { flex: none; margin-left: auto; padding: .1rem .4rem; border-radius: .3rem; font-size: .6875rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.s-hands { background: var(--attn-hands-on); color: var(--c-tomato-ink); }
+.s-eye { background: var(--attn-eye); color: var(--c-carrot-ink); }
+.s-self { background: var(--attn-self); color: var(--c-ocean-ink); }
+
+/* 4. The week: dinners drop into the days, then the list fills, adds up and ticks off. ----------- */
+.s4-days { display: grid; gap: .22rem; }
+.s4-days li { display: flex; align-items: center; gap: .5rem; height: 1.35rem; }
+.s4-d { flex: none; width: 2.1rem; color: var(--muted); font-size: .75rem; font-weight: 700; }
+.s4-empty { flex: 1; height: .5rem; border-radius: 999px; border: 1px dashed var(--border); }
+.s4-dish { flex: 0 1 auto; padding: .12rem .45rem; border-radius: .35rem; font-size: .75rem; font-weight: 700; }
+.s4-dish1 { background: var(--c-tomato); color: var(--c-tomato-ink); }
+.s4-dish2 { background: var(--c-basil); color: var(--c-basil-ink); }
+.s4-dish3 { background: var(--c-carrot); color: var(--c-carrot-ink); }
+.s4-list { display: grid; gap: .45rem; padding-top: .5rem; border-top: 1px solid var(--border); }
+.s4-n { position: relative; display: inline-block; min-width: 4.6rem; height: 1.15em; }
+.s4-n span { position: absolute; right: 0; top: 0; }
+.s4-merge { position: relative; height: 3.15rem; }
+.s4-merge > span { position: absolute; left: 0; right: 0; display: flex; align-items: center; gap: .45rem; }
+.s4-m1 { top: 0; }
+.s4-m2 { top: 2.15rem; }
+.s4-m3 { top: 1.07rem; }
+.s4-m3 em { color: var(--muted); font-size: .6875rem; }
+.s4-items { display: grid; gap: .3rem; }
+.s4-items li { display: flex; align-items: center; gap: .45rem; }
+.s4-pantry { color: var(--muted); font-size: .75rem; }
+.s4-pantry span { text-decoration: line-through; }
+
+/* 5. The iPhone Duo: the device opens like a book. ---------------------------------------------
+   A SCHEMATIC foldable, not a picture of one: two rounded panels, a hinge line between them and the
+   page's own flat colours — no camera, no buttons, no island, no bezel, nothing of Apple's hardware.
+   The screens are drawn at the proportions the app measures (CookSplit's header): opened flat the
+   inner display is 871 x 669 pt, wider than tall, with the hinge down the middle; the box below
+   takes that ratio and grows past it if its words need more, so nothing in it can be cut off.
+
+   The finished picture is the device OPEN, and every row, column and panel of it is laid out in that
+   state, so the layout never changes: closed is only a transform of it. Three layers make the fold.
+     .s5-base   the right half of the inner display — what's coming and the timeline. Never moves.
+     .s5-leaf   the left half, the one that swings. Its inside face (.s5-inside) is the step and its
+                ingredients (CookAlongView.focusColumn); its OUTSIDE face (.s5-outer) is the outer
+                display, the portrait cook screen, turned over and hidden when the leaf is open.
+     .s5-dev    both halves and the hinge between them.
+   Shut, the leaf is turned 180deg about the hinge, so it lies exactly on top of the base with its
+   outside face up, and the whole device is slid a quarter to the left so the shut device sits in the
+   middle. Opening turns the leaf back (rotateY, toward the reader, as a cover lifts) and slides the
+   device home in the same time, so the hinge ends in the middle. Transform and opacity only.
+
+   The perspective is kept long (125rem) on purpose: the swinging edge comes toward the reader and so
+   draws a little taller than the device, and the stage's padding is sized for that growth, so the
+   leaf never reaches the head above it or the card's edge below. */
+.story-duo { --ease-hinge: cubic-bezier(.45, 0, .55, 1); }
+.s5-fin {
+  flex: none; padding: .1rem .5rem; border-radius: 999px; border: 1px solid var(--border);
+  color: var(--muted); font-size: .6875rem; font-weight: 800; white-space: nowrap;
+}
+.s5-stage { padding-block: 1rem .35rem; }
+.s5-dev {
+  --g: .55rem;
+  display: grid; grid-template-columns: minmax(0, 1fr) var(--g) minmax(0, 1fr); grid-template-rows: 1fr;
+  max-width: 24rem; margin-inline: auto; aspect-ratio: 871 / 669;
+  perspective: 125rem;
+}
+.s5-half {
+  display: grid; align-content: space-between; gap: .6rem; min-width: 0;
+  padding: .6rem .6rem .65rem; border: 1px solid var(--border); border-radius: .8rem; background: var(--band);
+}
+/* The open book's second half is what's coming and then the timeline, one under the other and from the
+   top (CookAlongView.secondPane), where the step's half keeps its controls at the foot. */
+.s5-base { grid-area: 1 / 3; position: relative; z-index: 0; align-content: start; gap: .9rem; }
+/* The hinge: a line down the middle of the open device (and, shut, its spine at the left edge). */
+.s5-hinge { grid-area: 1 / 2; justify-self: center; width: .2rem; margin-block: .9rem; border-radius: 999px; background: var(--border); }
+.s5-leaf {
+  grid-area: 1 / 1; display: grid; position: relative; z-index: 1;
+  transform-style: preserve-3d; transform-origin: calc(100% + var(--g) / 2) 50%;
+}
+.s5-face { grid-area: 1 / 1; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+/* The outside face, turned over. Open, it faces away and is hidden twice over: by its back face, and
+   by opacity 0 in case a browser draws back faces anyway. */
+.s5-outer { align-content: start; gap: .75rem; transform: rotateY(180deg); opacity: 0; }
+.s5-grp { display: grid; gap: .3rem; align-content: start; }
+/* Large, as the app sets the step (largeTitle, read from four feet away), within what the half holds. */
+.s5-big { font-weight: 700; font-size: clamp(1rem, 3.2vw, 1.375rem); line-height: 1.2; }
+.s5-ing { color: var(--c-honey-text); font-weight: 700; }
+.s5-row { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .5rem; }
+.s5-left { color: var(--c-tomato-text); font-weight: 700; }
+.s5-how { color: var(--muted); }
+.s5-inside .s5-btn { margin: .1rem 0 0; padding-block: .3rem; text-align: center; }
+/* The step has only just started, so its bar is barely drawn (the screenshots beside it agree). */
+.s5-meter i { transform: scaleX(.06); }
+.s5-card {
+  display: grid; gap: .3rem; padding: .45rem .5rem .5rem;
+  border: 1px solid var(--border); border-radius: .55rem; background: var(--surface);
+}
+.s5-t { font-weight: 700; font-size: .875rem; }
+.s5-up { display: grid; gap: .05rem; }
+.s5-up + .s5-up { margin-top: .25rem; }
+/* "in 2 min" in the colour of the attention that step wants, as the app writes it: hands on, then keep an eye on it. */
+.s5-in { color: var(--c-tomato-text); font-size: .75rem; font-weight: 700; }
+.s5-in-eye { color: var(--c-carrot-text); }
+.s5-tl { position: relative; height: 1.75rem; }
+.s5-bar {
+  position: absolute; height: .45rem; border-radius: 999px; background: var(--c);
+  left: calc(var(--s) / 100 * 100%); width: calc(var(--d) / 100 * 100%);
+  transform-origin: left center;
+}
+.s5-bar:nth-child(1) { top: .1rem; }
+.s5-bar:nth-child(2) { top: .75rem; }
+.s5-bar:nth-child(3) { top: 1.4rem; }
+
+/* The "before" half of every swap. Each drawing's finished state is the one AFTER the swap — the
+   dishes together, the next step in progress, the list done — so these layers are invisible in it.
+   They have to be invisible in the STILL picture too, not only at the end of an animation, or with
+   motion turned down two labels would sit on top of each other. Every keyframes that ends here
+   names both of its ends, so the animation and this rule agree. */
+.s2-a, .s2-ta, .s3-card-a, .s3-list-a, .s4-m1, .s4-m2, .s4-na { opacity: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Every drawing's moving parts. Written `paused`: only a panel site.js has marked `.play` runs,
+     and the two rules at the end of this block are what start and stop it. */
+
+  /* 1. One recipe ------------------------------------------------------------------------------ */
+  .js-anim .s1-lab em { animation: s-fade .5s ease-out .15s both paused; }
+  .js-anim .s1-ing .s-tick { animation: s-pop .45s var(--ease-pop) calc(.25s + var(--i, 0) * .22s) both paused; }
+  .js-anim .s1-hatch { animation: s-drawx .5s var(--ease-in-view) calc(1.5s + var(--i, 0) * .3s) both paused; }
+  .js-anim .s1-prep li > span:not(.s1-hatch), .js-anim .s1-prep li > em {
+    animation: s-fade .45s ease-out calc(1.6s + var(--i, 0) * .3s) both paused;
+  }
+  .js-anim .s1-plab em { animation-delay: 2.2s; }
+  .js-anim .s1-step { animation: s-rise .6s var(--ease-in-view) 2.5s both paused; }
+
+  /* 2. A whole meal --------------------------------------------------------------------------- */
+  /* Both dishes move, because the published per-dish times leave no choice: one after another the
+     dal runs 0-57 and the carbonara 57-90; together they both land on the 70 line, the dal at 13-70
+     and the carbonara at 37-70. So the dal slides RIGHT by 13 min and the carbonara LEFT by 20 —
+     each by the same 1.05s, starting together, so the two bars arrive on the finish line as one
+     move. The percentages are of each bar's OWN width: 13/57 for the dal, and 20/90 of the chart
+     for .s2-move, which also carries the finish line back from 90 to 70.
+     The opening comparison is held ~1.9s (the panel itself is still fading in for the first 0.7s),
+     so "One dish at a time / 1 hr 30 min" can actually be read before it is swapped. */
+  .js-anim .s2-bar1 { animation: s2-slide1 1.05s var(--ease-in-view) 1.9s both paused; }
+  .js-anim .s2-move { animation: s2-slide 1.05s var(--ease-in-view) 1.9s both paused; }
+  .js-anim .s2-a, .js-anim .s2-ta { animation: s-unfade .35s ease-out 2.05s both paused; }
+  .js-anim .s2-b, .js-anim .s2-tb { animation: s-fade .45s ease-out 2.45s both paused; }
+  .js-anim .s2-gain { animation: s-drawx .55s var(--ease-in-view) 2.85s both paused; }
+  .js-anim .s2-saved { animation: s-fade .5s ease-out 2.95s both paused; }
+  .js-anim .s2-saved .s-count i { animation: s2-count 1.1s steps(5, jump-none) 3.1s both paused; }
+
+  /* 3. Cooking along -------------------------------------------------------------------------- */
+  .js-anim .s3-set { animation: s-fade .5s ease-out .2s both paused; }
+  .js-anim .s3-card-a .s3-meter i { animation: s3-fill 2.8s linear .35s both paused; }
+  .js-anim .s3-cd i { animation: s3-cd 2.7s steps(3, jump-none) .4s both paused; }
+  .js-anim .s3-cardtick { animation: s-pop .45s var(--ease-pop) 3.3s both paused; }
+  .js-anim .s3-card-a { animation: s3-out 1.25s var(--ease-in-view) 3.3s both paused; }
+  .js-anim .s3-card-b { animation: s3-in 1.15s var(--ease-in-view) 4.05s both paused; }
+  .js-anim .s3-list-a { animation: s-unfade .4s ease-out 4.05s both paused; }
+  .js-anim .s3-list-b { animation: s-fade .5s ease-out 4.45s both paused; }
+  .js-anim .s3-alert { animation: s3-alert .75s var(--ease-pop) 4.35s both paused; }
+
+  /* 4. The week ------------------------------------------------------------------------------- */
+  .js-anim .s4-dish { animation: s4-drop .6s var(--ease-pop) calc(.35s + var(--i, 0) * .4s) both paused; }
+  .js-anim .s4-lab { animation: s-fade .45s ease-out 1.6s both paused; }
+  .js-anim .s4-m1 { animation: s4-join 1.5s var(--ease-in-view) 1.85s both paused; }
+  .js-anim .s4-m2 { animation: s4-join-up 1.5s var(--ease-in-view) 1.85s both paused; }
+  .js-anim .s4-m3 { animation: s-fade .5s ease-out 3.05s both paused; }
+  .js-anim .s4-items li { animation: s-rise .5s var(--ease-in-view) calc(3.3s + var(--i, 0) * .25s) both paused; }
+  .js-anim .s4-list .s-box .s-tick { animation: s-pop .4s var(--ease-pop) calc(4.1s + var(--i, 0) * .3s) both paused; }
+  .js-anim .s4-na { animation: s-unfade .4s ease-out 5s both paused; }
+  .js-anim .s4-nb { animation: s-fade .5s ease-out 5.35s both paused; }
+  .js-anim .s4-pantry { animation: s-fade .5s ease-out 5.5s both paused; }
+
+  /* 5. The iPhone Duo ------------------------------------------------------------------------- */
+  /* Held shut for .7s, so the outer screen is read first; then the leaf swings open and the device
+     slides to the middle, one 1.35s move on one easing; then, flat, the timeline draws out. The
+     easing is symmetric, so the leaf is edge-on exactly halfway through (1.375s) — which is where the
+     outside face switches off (s5-cover), at the one moment it is a line with no area to see, and
+     where the right half's screen wakes (its words fade up). Until then that half is a blank panel:
+     while the leaf is lifting off it, the words under the leaf's edge would otherwise peek out beside
+     it in cut-off fragments, and a screen that lights when it is opened is what a foldable does. */
+  .js-anim .s5-dev { animation: s5-centre 1.35s var(--ease-hinge) .7s both paused; }
+  .js-anim .s5-leaf { animation: s5-open 1.35s var(--ease-hinge) .7s both paused; }
+  .js-anim .s5-outer { animation: s5-cover 1.35s linear .7s both paused; }
+  .js-anim .s5-base > .s5-grp { animation: s-fade .4s ease-out 1.38s both paused; }
+  .js-anim .s5-bar { animation: s-drawx .55s var(--ease-in-view) calc(2.15s + var(--i, 0) * .2s) both paused; }
+
+  /* What starts and stops them. site.js puts `play` on a panel while it is on screen and takes it
+     off again when it leaves, so a drawing pauses where it stood and carries on when it comes
+     back; once it has finished, `paused` at the end is the finished picture. These two rules come
+     last on purpose, and they are the only !important in this stylesheet: several of the shorthands
+     above name more classes than `.story.play *` does, so nothing short of !important can reach
+     them all. The order still matters — the hidden-tab rule has to come second. */
+  .js-anim .story.play * { animation-play-state: running !important; }
+  .js-anim.tab-hidden .story.play * { animation-play-state: paused !important; }
+
+  /* 6. Pro: the chip shimmers once as it arrives. A soft band sweeps from the chip's left edge to
+     its right and no further (40% wide, travelling 150% of itself = 60% of the chip), fading up and
+     out as it goes, so nothing can spill past the chip. `in` is added once, in view, and never
+     removed, so this runs one time and then rests at nothing. */
+  .pro::after {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 40%; border-radius: .4em;
+    pointer-events: none; opacity: 0;
+    background: linear-gradient(100deg, rgb(255 255 255 / 0), rgb(255 255 255 / .8), rgb(255 255 255 / 0));
+  }
+  .js-anim .shot.in .pro::after { animation: pro-shine 1.15s ease-out .55s both; }
+}
+
+@keyframes s-fade { from { opacity: 0; } }
+@keyframes s-unfade { from { opacity: 1; } to { opacity: 0; } }
+@keyframes s-pop { from { opacity: 0; transform: scale(.3); } }
+@keyframes s-rise { from { opacity: 0; transform: translateY(.55rem); } }
+@keyframes s-drawx { from { transform: scaleX(0); } }
+@keyframes s2-slide { from { transform: translateX(calc(20 / 90 * 100%)); } }
+@keyframes s2-slide1 { from { transform: translateX(calc(-13 / 57 * 100%)); } }
+@keyframes s2-count { from { transform: translateY(0); } }
+@keyframes s3-fill { from { transform: scaleX(.34); } }
+@keyframes s3-cd { from { transform: translateY(0); } }
+@keyframes s3-out {
+  0%, 58% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-.8rem); }
+}
+@keyframes s3-in {
+  0%, 14% { opacity: 0; transform: translateY(.9rem); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes s3-alert { from { opacity: 0; transform: translateY(-130%); } }
+@keyframes s4-drop { from { opacity: 0; transform: translateY(-.7rem); } }
+@keyframes s4-join {
+  0%, 18% { opacity: 0; transform: translateY(-.3rem); }
+  34%, 56% { opacity: 1; transform: none; }
+  82%, 100% { opacity: 0; transform: translateY(.62rem); }
+}
+/* Shut: the device a quarter to the left (half a panel and half the hinge), the leaf turned over onto
+   the base with its outside face showing. */
+@keyframes s5-centre { from { transform: translateX(calc(-25% - var(--g) / 4)); } }
+@keyframes s5-open { from { transform: rotateY(180deg); } }
+@keyframes s5-cover { from, 50% { opacity: 1; } 50.5%, to { opacity: 0; } }
+@keyframes s4-join-up {
+  0%, 18% { opacity: 0; transform: translateY(.3rem); }
+  34%, 56% { opacity: 1; transform: none; }
+  82%, 100% { opacity: 0; transform: translateY(-.62rem); }
+}
+@keyframes pro-shine {
+  0% { opacity: 0; transform: translateX(0); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(150%); }
+}

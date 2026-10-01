@@ -1,0 +1,8 @@
+# The footer's links, in order. The footer on every page is built from this list.
+# To publish a page, add its line here (or remove the # from one below).
+- { title: "Privacy Policy", url: "/privacy.html" }
+- { title: "Support", url: "/support.html" }
+- { title: "Community Guidelines", url: "/guidelines.html" }
+- { title: "Terms of Use", url: "/terms.html" }
+- { title: "Copyright", url: "/copyright.html" }
+- { title: "Report illegal content", url: "/report.html" }
