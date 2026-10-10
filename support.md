@@ -18,13 +18,13 @@ If reporting doesn't work, the app offers to send the report by email instead, o
 
 ## Taking down something you published
 
-In the app: **Settings › About › Remove something I published**. You can also open the recipe on Explore and take it down from there. If you no longer have the device you published from, email us and we'll remove it.
+In the app: open the recipe and choose **Remove from Explore**, or go to **Settings › Your recipes on Explore**, which lists everything you've shared from any of your devices, with **Remove all from Explore** to take it all down at once. You can also open your recipe on Explore and remove it from there. If you shared it while signed in to a different Apple Account, email us and we'll remove it.
 
 ## Recimama Pro: cancelling and refunds
 
 Apple sells Recimama Pro and takes every payment, so cancelling and refunds go through your Apple Account.
 
-- **To cancel on an iPhone or iPad:** **Settings > [your name] > Subscriptions**, then Recimama Pro — the words the Recimama Pro screen uses.
+- **To cancel on an iPhone, iPad or Apple Vision Pro:** **Settings > [your name] > Subscriptions**, then Recimama Pro — the words the Recimama Pro screen uses.
 - **To cancel on a Mac:** **App Store > [your name] > Subscriptions**.
 - **Or, on any of them:** in Recimama, **Settings › Purchases › Manage Subscription**.
 - **The 24-hour rule.** A subscription renews automatically at the price shown until you cancel; to stop the next renewal, cancel at least 24 hours before the end of the current period. If the price ever changes, Apple tells you first. The same goes for a free trial: the Recimama Pro screen gives the day it ends and says "Cancel at least 24 hours before then and you won't be charged." After you cancel, Pro stays on until the end of the period you've paid for.
@@ -35,7 +35,7 @@ If Pro ends, nothing you made with it is deleted.
 
 ## Ads
 
-The free version shows a few ads from Google while you browse, never while you cook. This version has no full-screen, app-open, video or rewarded ads. You won't see any if you have ever paid for Recimama Pro, or while you're in a free trial or share Pro through Family Sharing. On a Mac there are no ads. To report an ad, tap the flag beside it. What Google receives is in the [privacy policy](privacy.html), section 11.
+The free version shows a few ads from Google while you browse, never while you cook. This version has no full-screen, app-open, video or rewarded ads. You won't see any while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. On a Mac or Apple Vision Pro there are no ads. To report an ad, tap the flag beside it. What Google receives is in the [privacy policy](privacy.html), section 11.
 
 ## Your recipes and iCloud
 
