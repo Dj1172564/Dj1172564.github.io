@@ -732,18 +732,18 @@ main:focus { outline: none; }
 .s2-move { position: absolute; inset: 0; }
 .s2-bar {
   position: absolute; height: 1.5rem; border-radius: .4rem;
-  left: calc(var(--s) / 90 * 100%); width: calc(var(--d) / 90 * 100%);
+  left: calc(var(--s) / 85 * 100%); width: calc(var(--d) / 85 * 100%);
   display: flex; align-items: center; padding-inline: .4rem; overflow: hidden;
   font-size: .75rem; font-weight: 700; white-space: nowrap;
 }
 .s2-bar1 { top: 0; background: var(--c-basil); color: var(--c-basil-ink); }
 .s2-bar2 { top: 1.85rem; background: var(--c-carrot); color: var(--c-carrot-ink); }
-.s2-finish { position: absolute; top: 0; bottom: 1.35rem; left: calc(70 / 90 * 100%); border-left: 2px dashed var(--text); }
+.s2-finish { position: absolute; top: 0; bottom: 1.35rem; left: calc(60 / 85 * 100%); border-left: 2px dashed var(--text); }
 /* The label hangs to the LEFT of the dashed line, not the right: in the opening comparison the line
-   stands at 90 min, the chart's own right edge, and a label to its right would run off the card. */
+   stands at 85 min, the chart's own right edge, and a label to its right would run off the card. */
 .s2-finish span { position: absolute; right: .3rem; top: 3.5rem; color: var(--muted); font-size: .6875rem; font-weight: 700; white-space: nowrap; }
 .s2-gain {
-  position: absolute; top: 0; height: 3.35rem; left: calc(70 / 90 * 100%); width: calc(20 / 90 * 100%);
+  position: absolute; top: 0; height: 3.35rem; left: calc(60 / 85 * 100%); width: calc(25 / 85 * 100%);
   transform-origin: left center; border-radius: .4rem;
   /* A soft green wash, NOT the diagonal hatch: story 1 above has already taught the reader that a
      hatched bar means prep, so the saved time has to look like something else. */
@@ -922,20 +922,24 @@ main:focus { outline: none; }
 
   /* 2. A whole meal --------------------------------------------------------------------------- */
   /* Both dishes move, because the published per-dish times leave no choice: one after another the
-     dal runs 0-57 and the carbonara 57-90; together they both land on the 70 line, the dal at 13-70
-     and the carbonara at 37-70. So the dal slides RIGHT by 13 min and the carbonara LEFT by 20 —
+     dal runs 0-57 and the carbonara 57-85; together they both land on the 60 line, the dal at 3-60
+     and the carbonara at 32-60. So the dal slides RIGHT by 3 min and the carbonara LEFT by 25 —
      each by the same 1.05s, starting together, so the two bars arrive on the finish line as one
-     move. The percentages are of each bar's OWN width: 13/57 for the dal, and 20/90 of the chart
-     for .s2-move, which also carries the finish line back from 90 to 70.
+     move. The percentages are of each bar's OWN width: 3/57 for the dal, and 25/85 of the chart
+     for .s2-move, which also carries the finish line back from 85 to 60.
+     The figures are the app's own for its seeded dal and carbonara, one cook, ready together on
+     (MenuScheduler + verdict, worked out 2026-10-04 on the integration line at bafdb9c): 57 + 28 min
+     on their own, 1 hr together, 25 min saved. Change them here, in index.html's story and in the
+     counter's steps() below together.
      The opening comparison is held ~1.9s (the panel itself is still fading in for the first 0.7s),
-     so "One dish at a time / 1 hr 30 min" can actually be read before it is swapped. */
+     so "One dish at a time / 1 hr 25 min" can actually be read before it is swapped. */
   .js-anim .s2-bar1 { animation: s2-slide1 1.05s var(--ease-in-view) 1.9s both paused; }
   .js-anim .s2-move { animation: s2-slide 1.05s var(--ease-in-view) 1.9s both paused; }
   .js-anim .s2-a, .js-anim .s2-ta { animation: s-unfade .35s ease-out 2.05s both paused; }
   .js-anim .s2-b, .js-anim .s2-tb { animation: s-fade .45s ease-out 2.45s both paused; }
   .js-anim .s2-gain { animation: s-drawx .55s var(--ease-in-view) 2.85s both paused; }
   .js-anim .s2-saved { animation: s-fade .5s ease-out 2.95s both paused; }
-  .js-anim .s2-saved .s-count i { animation: s2-count 1.1s steps(5, jump-none) 3.1s both paused; }
+  .js-anim .s2-saved .s-count i { animation: s2-count 1.1s steps(6, jump-none) 3.1s both paused; }
 
   /* 3. Cooking along -------------------------------------------------------------------------- */
   .js-anim .s3-set { animation: s-fade .5s ease-out .2s both paused; }
@@ -1000,8 +1004,8 @@ main:focus { outline: none; }
 @keyframes s-pop { from { opacity: 0; transform: scale(.3); } }
 @keyframes s-rise { from { opacity: 0; transform: translateY(.55rem); } }
 @keyframes s-drawx { from { transform: scaleX(0); } }
-@keyframes s2-slide { from { transform: translateX(calc(20 / 90 * 100%)); } }
-@keyframes s2-slide1 { from { transform: translateX(calc(-13 / 57 * 100%)); } }
+@keyframes s2-slide { from { transform: translateX(calc(25 / 85 * 100%)); } }
+@keyframes s2-slide1 { from { transform: translateX(calc(-3 / 57 * 100%)); } }
 @keyframes s2-count { from { transform: translateY(0); } }
 @keyframes s3-fill { from { transform: scaleX(.34); } }
 @keyframes s3-cd { from { transform: translateY(0); } }

@@ -14,7 +14,7 @@ body_class: home
       </div>
       <div class="hero-intro">
         <p class="lede">Recimama turns a recipe into a timeline. It works out which steps can happen at the same time, tells you what to do next and sets an alert for each step, so everything comes together when you want to eat.</p>
-        <p class="soon"><span class="soon-badge">Coming soon to the App Store</span> <span class="soon-note">Free to download, with an optional subscription.</span></p>
+        <p class="soon"><span class="soon-badge">Coming soon to the App Store</span> <span class="soon-note">Free to download, with an optional subscription or one-time purchase.</span></p>
       </div>
     </div>
 
@@ -26,7 +26,7 @@ body_class: home
         </div>
         <dl class="meal-stats">
           <div><dt>Start to finish</dt><dd>1 hr 25 min</dd></div>
-          <div><dt>Hands on</dt><dd>1 hr 2 min</dd></div>
+          <div><dt>Needs you</dt><dd>1 hr 2 min</dd></div>
         </dl>
       </div>
 
@@ -86,7 +86,7 @@ body_class: home
           <li><span class="key eye"></span>Keep an eye on it</li>
           <li><span class="key self"></span>Looks after itself</li>
         </ul>
-        <p class="meal-caption" id="meal-caption">An example meal for one cook, timed for dinner at 7:00. <span class="cap-more">The prep comes first, the potatoes and beans slot into the time the chicken is already taking, and your hands are never needed in two places at once: 1 hour 2 minutes hands on or keeping an eye on things, with a 23-minute break in the middle. </span>You can plan a meal like this without Pro; cooking the dishes along together, on one clock, is part of Recimama Pro.</p>
+        <p class="meal-caption" id="meal-caption">An example meal for one cook, timed for dinner at 7:00. <span class="cap-more">The prep comes first, the potatoes and beans slot into the time the chicken is already taking, and your hands are never needed in two places at once: the meal needs you for 1 hour 2 minutes, 42 of them hands on and 20 keeping an eye on it, with a 23-minute break in the middle. </span>You can plan a meal like this without Pro; cooking the dishes along together, on one clock, is part of Recimama Pro.</p>
       </figcaption>
     </figure>
   </div>
@@ -99,7 +99,7 @@ body_class: home
         <p class="eyebrow"><span class="step-no">1</span> One recipe</p>
         <h2 id="how-title">Cooking is a plan, not a list.</h2>
         <p>Each step knows how long it takes and whether it needs your hands, a watchful eye or nothing at all, so the water heats while the bacon fries. Recimama works out what has to wait for what and overlaps everything else, but never more than your kitchen can do at once, going by the burners and ovens you tell it you have.</p>
-        <p class="key-intro" id="attn-key-title">In the app’s charts, a step’s colour shows how much attention it needs:</p>
+        <p class="key-intro" id="attn-key-title">In the app’s charts, a step’s color shows how much attention it needs:</p>
         <ul class="attn-key" aria-labelledby="attn-key-title">
           <li><span class="attn-swatch attn-hands" aria-hidden="true"></span>Hands on</li>
           <li><span class="attn-swatch attn-eye" aria-hidden="true"></span>Keep an eye on it</li>
@@ -112,7 +112,7 @@ body_class: home
             <p class="story-lab s1-lab">Ingredients <em>ticked: already in your pantry</em></p>
             <ul class="s1-ing">
               <li style="--i: 0"><span class="s-tick"></span>120 g pancetta</li>
-              <li style="--i: 1"><span class="s-tick"></span>60 g pecorino</li>
+              <li style="--i: 1"><span class="s-tick"></span>50 g pecorino</li>
               <li style="--i: 2"><span class="s-tick"></span>200 g spaghetti</li>
               <li style="--i: 3"><span class="s-tick"></span>2 eggs</li>
             </ul>
@@ -126,18 +126,18 @@ body_class: home
           <figcaption>Drawn for this page, not a screenshot: the ingredients your pantry already covers tick themselves off, then the prep lights up — grate pecorino, dice pancetta — all of it first, before step 1, Boil water.</figcaption>
         </figure>
       </div>
-      <div class="shots">
+      <div class="shots shots-mixed">
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/02-recipe-timeline.webp">
-            <img src="/assets/screens/02-recipe-timeline.jpg" width="600" height="1304" loading="lazy" alt="The Spaghetti Carbonara recipe on its Timeline view: coloured bars for you and the stovetop, keyed as hands on, keep an eye on it and looks after itself, with the prep drawn first. Below are a Start cooking button and the method, where each step shows its time and how much attention it needs.">
+            <img src="/assets/screens/02-recipe-timeline.jpg" width="600" height="1304" loading="lazy" alt="The Spaghetti Carbonara recipe on its Timeline view: colored bars for you and the stovetop, each labeled with its step, such as Fry pancetta, Add spaghetti and Bring salted water, keyed as hands on, keep an eye on it and looks after itself, with the prep drawn first. Below are a Start cooking button and the method, where each step shows its time, how much attention it needs and the ingredients it uses, such as 2 large eggs and 50 g pecorino for whisking the eggs.">
           </picture>
           <figcaption>Every step has a time and an attention level.</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source type="image/webp" srcset="/assets/screens/04-prep-first.webp">
-            <img src="/assets/screens/04-prep-first.jpg" width="600" height="1000" loading="lazy" alt="The Spaghetti Carbonara ingredients for two, four of them ticked as already in the pantry, then a Prep section, grate pecorino and dice pancetta, about 5 minutes, with a note that all of it comes first, before step 1. Below are a Pro option for cooking with someone and a Start cooking button.">
+            <source type="image/webp" srcset="/assets/screens/04-prep-block.webp">
+            <img class="crop" src="/assets/screens/04-prep-block.jpg" width="600" height="182" loading="lazy" alt="The Prep section of the Spaghetti Carbonara recipe: grate pecorino and dice pancetta, about 5 minutes, with a note that it’s on the timeline and in the total, all of it first, before step 1.">
           </picture>
           <figcaption>The prep comes first, before step 1.</figcaption>
         </figure>
@@ -147,29 +147,58 @@ body_class: home
     <div class="feature feature-flip">
       <div class="feature-text">
         <h3>Get a recipe in, any way you like.</h3>
-        <p>Clip it from a web page, share a link or a screenshot, photograph a cookbook page, dictate it or paste the text, then check what was read before it’s saved. Photographed pages and dictation are read on your device.</p>
-        <p>Every recipe gets its own colour in your library, with its total and hands-on time on the card.</p>
+{%- comment -%}
+  Build 3 (the line at 8c9173b, TestFlight build of 7 October 2026). Reading a recipe from a photo is Recimama Pro
+  since 5 October (ProFeature.photoImport: Photograph a page, several pages or screenshots, a photo or screenshot
+  shared to Recimama, and Invent something's three photo routes); the web, the Safari extension, a link, pasted or
+  typed text, dictation and a PDF stay free (ProTerms.whatStaysFree). So the photo routes are said "with Recimama
+  Pro" and never in the free list. The social sentence is items 17 and 17b: a post shared from, or a link pasted
+  from, Instagram, Facebook, TikTok or Threads is read from the page the platform makes for showing it on other
+  sites, a YouTube video's description from its page, and a Pinterest pin from the page it was saved from
+  (SharedPostEmbed, PinterestPin; privacy section 7). Its words are the app's: the tour's "On a recipe, a post or
+  a video, tap Share and choose Recimama", and From a video link's "Recimama reads its text caption; no video is
+  downloaded" (CaptureSheet.videoLinkDetail), with a pin's own "the page the pin was saved from" (CaptureFlows).
+{%- endcomment %}
+        <p>Clip it from a web page, share a link, a post or a PDF, dictate it or paste the text, then check what was read before it’s saved. With <a href="#pro">Recimama Pro</a>, photograph a cookbook page or share a screenshot too. Photographed pages and dictation are read on your device.</p>
+        <p>On Instagram, TikTok, Facebook, Threads, YouTube or Pinterest, tap Share on a post, a video or a pin and choose Recimama, or paste its link: Recimama reads its text caption, or for a pin the page it was saved from, and no video is downloaded.</p>
+{%- comment -%}
+  The duplicate finder (worktree duplicates 0457f00, free): the library notes a recipe saved twice in one
+  line, Settings > Find duplicate recipes shows the copies side by side, and "Keep this one" keeps the chosen
+  one and sends the others to Recently Deleted. Customize card (CardCustomizerView: a recipe's photo, color,
+  emoji and tags) stays free — the developer, 6 October 2026; only "Make a card", the printable card, is Pro.
+{%- endcomment %}
+        <p>Every recipe gets its own color in your library, with its total time and the time it needs you on the card. Customize card, free for everyone, gives a recipe your own photo, color, emoji and tags. Recimama spots a recipe saved twice and keeps the one you choose.</p>
       </div>
       <div class="shots shots-mixed">
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/10-add-a-recipe.webp">
-            <img class="crop" src="/assets/screens/10-add-a-recipe.jpg" width="600" height="642" loading="lazy" alt="The Add a recipe sheet, offering Find one on the web, Photograph a page, for a cookbook page, a magazine or a handwritten card, read on this device, and Dictate it, transcribed on this device.">
+            <img class="crop" src="/assets/screens/10-add-a-recipe.jpg" width="600" height="840" loading="lazy" alt="The Add a recipe sheet: Find one on the web; Photograph a page, marked PRO, for a cookbook page, a magazine or a handwritten card, read on this device; Dictate it, transcribed on this device; Paste text, to type a recipe of your own or paste one in; and From a video link, where Recimama reads the text caption of a video or post on YouTube, Instagram, TikTok or Facebook and no video is downloaded.">
           </picture>
-          <figcaption>From the web, a photographed page or your voice.</figcaption>
+          <figcaption>From the web, a photographed page, your voice, text or a video link.</figcaption>
         </figure>
         <figure class="shot shot-cards">
           <picture>
             <source type="image/webp" srcset="/assets/screens/03-library-cards.webp">
-            <img class="crop" src="/assets/screens/03-library-cards.jpg" width="800" height="622" loading="lazy" alt="Six recipe cards from the library, each in its own colour: Beef Lasagne, Slow Beef Ragu, Thai Green Curry, Red Lentil Dal, Sheet-Pan Salmon and Greens, and Roast Root Vegetables, each showing total and hands-on time.">
+            <img class="crop" src="/assets/screens/03-library-cards.jpg" width="800" height="578" loading="lazy" alt="Six recipe cards from the library, each in its own color: Slow Beef Ragu, Thai Green Curry, Red Lentil Dal, Sheet-Pan Salmon and Greens, Roast Root Vegetables, and Chicken and Potato Traybake, each showing its total time and, beside a person, the time it needs you.">
           </picture>
-          <figcaption>Your library, in colour.</figcaption>
+          <figcaption>Your library, in color.</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </section>
 
+{%- comment -%}
+  Story 2's figures are the app's own for its Red Lentil Dal and Spaghetti Carbonara, one cook, ready
+  together on (MenuPlannerView.solve: MenuScheduler + verdict), worked out on the integration line at bafdb9c
+  on 2026-10-04 and again at 8c9173b (build 3) on 2026-10-07 with the same answer: 57 and 28 min on their own,
+  1 hr 25 min one after another, 1 hr together, 25 min saved. Since build 3 the dal is no longer
+  one of the four samples a new library starts with (it is the classic fixture's, as in the App Store set), and
+  the longer dish goes first (dal 0-59, carbonara 31-60), which the drawing's "tucked into the time the long one
+  is already taking" still says. The bars are drawn to those numbers in site.css ("2. A whole meal"): change
+  both together. The screenshot beside it is the App Store's 02 (8c9173b): three dishes ready together.
+{%- endcomment %}
 <section class="step band" id="meal" aria-labelledby="meal-title">
   <div class="wrap">
     <div class="feature feature-flip">
@@ -184,26 +213,26 @@ body_class: home
             <div class="s2-mode"><span class="s2-a">One dish at a time</span><span class="s2-b">All together</span></div>
             <div class="s2-chart">
               <div class="s2-gain"></div>
-              <div class="s2-bar s2-bar1" style="--s: 13; --d: 57"><span>Red Lentil Dal</span></div>
+              <div class="s2-bar s2-bar1" style="--s: 3; --d: 57"><span>Red Lentil Dal</span></div>
               <div class="s2-move">
-                <div class="s2-bar s2-bar2" style="--s: 37; --d: 33"><span>Carbonara</span></div>
+                <div class="s2-bar s2-bar2" style="--s: 32; --d: 28"><span>Carbonara</span></div>
                 <div class="s2-finish"><span>Both ready</span></div>
               </div>
             </div>
-            <div class="s2-totals"><span class="s2-ta">1 hr 30 min</span><span class="s2-tb">1 hr 10 min</span></div>
-            <p class="s2-saved"><span class="s-count" style="--n: 4"><i><b>0</b><b>5</b><b>10</b><b>15</b><b>20</b></i></span><span>min saved by cooking these two together</span></p>
+            <div class="s2-totals"><span class="s2-ta">1 hr 25 min</span><span class="s2-tb">1 hr</span></div>
+            <p class="s2-saved"><span class="s-count" style="--n: 5"><i><b>0</b><b>5</b><b>10</b><b>15</b><b>20</b><b>25</b></i></span><span>min saved by cooking these two together</span></p>
           </div>
-          <figcaption>Drawn for this page: on its own the dal takes about 57 min and the carbonara about 33, so one dish after another takes 1 hr 30 min. Slid onto one timeline, with the shorter dish tucked into the time the long one is already taking, both are ready together in 1 hr 10 min — 20 min saved by cooking these two together.</figcaption>
+          <figcaption>Drawn for this page: on its own the dal takes about 57 min and the carbonara about 28, so one dish after another takes 1 hr 25 min. Slid onto one timeline, with the shorter dish tucked into the time the long one is already taking, both are ready together in 1 hr — 25 min saved by cooking these two together.</figcaption>
         </figure>
         <p class="aside">Planning a meal and reading it as one recipe don’t need Pro. Cooking the dishes along together, on one clock, is part of <a href="#pro">Recimama Pro</a>.</p>
       </div>
       <div class="shots shots-single">
         <figure class="shot">
           <picture>
-            <source type="image/webp" srcset="/assets/screens/05-plan-a-meal-top.webp">
-            <img class="crop" src="/assets/screens/05-plan-a-meal-top.jpg" width="600" height="900" loading="lazy" alt="Plan a meal with two dishes chosen, Red Lentil Dal and Spaghetti Carbonara: 1 hour 10 minutes all together against 1 hour 30 minutes one dish at a time, and a green panel saying 20 minutes saved by cooking these two together.">
+            <source type="image/webp" srcset="/assets/screens/05-plan-a-meal-timeline.webp">
+            <img class="crop" src="/assets/screens/05-plan-a-meal-timeline.jpg" width="600" height="990" loading="lazy" alt="Plan a meal with three dishes, Chicken and Potato Traybake, Roast Root Vegetables and Spaghetti Carbonara, and Have everything ready together switched on. One timeline, a row each for you, the stovetop, two ovens and resting, each bar labeled with its step: the prep for the traybake and the roots comes first, the two roast in the ovens, and the carbonara is cooked in the time they are already taking.">
           </picture>
-          <figcaption>Two dishes together: 20 minutes saved.</figcaption>
+          <figcaption>Pick the dishes; they’re timed to finish together.</figcaption>
         </figure>
       </div>
     </div>
@@ -226,9 +255,9 @@ body_class: home
         </ul>
         <figure class="story-fig">
           <div class="story story-cook" aria-hidden="true">
-            <div class="s3-alert"><b>Spaghetti Carbonara</b><span>Whisk eggs</span><em>2 min · Hands on</em></div>
+            <div class="s3-alert"><b>Spaghetti Carbonara</b><em>2 min · Hands on</em><span>Whisk eggs</span></div>
             <p class="story-head"><span>Spaghetti Carbonara</span><span class="story-meta">12 min remaining</span></p>
-            <p class="s3-set">Alerts set — you can put the phone down.</p>
+            <p class="s3-set">Alerts are set for each step.</p>
             <div class="s3-now">
               <div class="s3-card s3-card-a">
                 <p class="s3-k">In progress</p>
@@ -255,7 +284,7 @@ body_class: home
               </ul>
             </div>
           </div>
-          <figcaption>Drawn for this page: the step you are on counts down and ticks itself done, the next one takes its place, and its alert arrives the way the app writes one — the recipe, the step, then how long it takes and how much attention it wants.</figcaption>
+          <figcaption>Drawn for this page: the step you are on counts down and ticks itself done, the next one takes its place, and its alert arrives the way the app writes one — the recipe, then how long the step takes and how much attention it wants, then the step itself.</figcaption>
         </figure>
         <p class="aside">Times are estimates. Recimama can’t see your pan, so always check that food is cooked through.</p>
       </div>
@@ -263,7 +292,7 @@ body_class: home
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/01-cook-along.webp">
-            <img src="/assets/screens/01-cook-along.jpg" width="600" height="1304" loading="lazy" alt="Recimama’s cook-along screen for Spaghetti Carbonara: 2 seconds elapsed and 32 minutes remaining, a note that alerts are set so you can put the phone down, the step in progress, Pancetta, diced, with 120 grams of pancetta and 2 minutes left, the next three steps in 2 and 4 minutes, and the recipe’s timeline below.">
+            <img src="/assets/screens/01-cook-along.jpg" width="600" height="1304" loading="lazy" alt="Recimama’s cook-along screen for Spaghetti Carbonara: 4 seconds elapsed and 27 minutes remaining beside a ring that fills as the cook goes, notes that alerts are set for each step and that the timeline is on the lock screen, the step in progress, Pancetta, diced, with 120 g of pancetta, hands on and 2 minutes left, the next three steps in 2 and 4 minutes, and the recipe’s timeline below.">
           </picture>
           <figcaption>What’s happening now, and what’s coming up.</figcaption>
         </figure>
@@ -271,7 +300,7 @@ body_class: home
       <figure class="shot shot-wide">
         <picture>
           <source type="image/webp" srcset="/assets/screens/07-cook-sideways.webp">
-          <img src="/assets/screens/07-cook-sideways.jpg" width="1200" height="552" loading="lazy" alt="The cook-along with the phone on its side: the current step, Pancetta, diced, in large type with 2 minutes left and a large Done, next step button, and what’s coming up in 2 and 4 minutes beside it.">
+          <img src="/assets/screens/07-cook-sideways.jpg" width="1200" height="552" loading="lazy" alt="The cook-along with the phone on its side: the current step, Pancetta, diced, in large type with 120 g of pancetta, 2 minutes left as the biggest figure beside its timer, and a large Done, next step button; beside it, the time elapsed and what’s coming up in 2 and 4 minutes.">
         </picture>
         <figcaption>On its side: one big step, and what’s next beside it.</figcaption>
       </figure>
@@ -376,7 +405,7 @@ body_class: home
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/09-shopping-list.webp">
-            <img src="/assets/screens/09-shopping-list.jpg" width="600" height="1304" loading="lazy" alt="A shopping list of 7 things to get for the chosen dishes, such as dried yeast, olive oil, rosemary and strong white flour, a note that amounts are added together across the dishes, and a separate list of what is already in the pantry.">
+            <img src="/assets/screens/09-shopping-list.jpg" width="600" height="1304" loading="lazy" alt="A shopping list of 11 things to get for the chosen dishes, such as dried yeast, eggs, pancetta, rosemary and strong white flour, a note that amounts are added together across the dishes, and a separate list of what is already in the pantry, left off the list.">
           </picture>
           <figcaption>One list, amounts added together.</figcaption>
         </figure>
@@ -393,9 +422,9 @@ body_class: home
 </section>
 
 {%- comment -%}
-  The iPhone Duo section. Apple has announced the device and it goes on sale next month; Recimama's
-  support for it ships in an APP UPDATE, not in the first version. So every line here is written in
-  the future — "Ready for", "arrives in an update when the Duo does" — and nothing claims that the
+  The iPhone Duo section. Apple has announced the device and it goes on sale October 23, 2026;
+  Recimama's support for it ships in an APP UPDATE, not in the first version. So every line here is
+  written in the future — "Coming to", "comes in an app update" — and nothing claims that the
   download waiting on the App Store already folds. None of it is Pro (CookAlongView gates none of
   the layout work behind a subscription), so nothing here is marked Pro.
 
@@ -406,8 +435,12 @@ body_class: home
   unnumbered sections, Pro and "Coming soon to the App Store". The words still point back to
   "Cooking along", which is the screen all of this happens on.
 
-  `duo_ready` in _config.yml takes the whole thing off the page, screenshots and drawing with it
-  (the 13-duo-* and 14-duo-* files stay published under /assets/screens, unreferenced).
+  `duo_ready` in _config.yml takes the whole thing off the page, drawing and all.
+
+  No screenshots since 2026-10-04: the two 27.1 Duo captures (13-duo-cook, 14-duo-fill-screen) showed
+  the old spinner and "120 grams", which the app no longer draws, so the site review dropped them and
+  the files with them. The drawing, in the column they had, is the picture until the update's own
+  screens can be shot. Put them back only from a capture of the build that ships the update.
 
   The open layout's second half holds only what's coming and the timeline; the step's ingredients
   stay in the step's half (CookAlongView.secondPane). The drawing is that open layout, and the
@@ -419,7 +452,7 @@ body_class: home
   their height; in the 27.1 build the vertical bar stays as an empty, painted column that takes no
   touches, and since 2026-09-30 the filled step runs under it and is centred on the glass
   (DuoSDK.centredOnTheGlass: 16 pt a side on the outer display, 16…450 of 466 pt), so the tick says
-  the whole width and the 14-duo-fill-screen shot is that centred, filled single column.
+  the whole width.
 {%- endcomment %}
 {% if site.duo_ready %}
 <section class="step" id="duo" aria-labelledby="duo-title">
@@ -427,17 +460,19 @@ body_class: home
     <div class="feature">
       <div class="feature-text">
         <p class="eyebrow">In an update</p>
-        <h2 id="duo-title">Ready for the iPhone Duo.</h2>
-        <p>The iPhone Duo goes on sale next month, and Recimama’s support for it arrives in an app update when the device does — not in the version you download first.</p>
-        <p>Opened flat, <a href="#cook">the cook screen</a> divides in two: the step you’re on, with the ingredients it needs, in one half, and what’s coming and the timeline in the other.</p>
+        <h2 id="duo-title">Coming to the iPhone Duo.</h2>
+        <p>The iPhone Duo goes on sale October 23, 2026. Recimama’s support for it comes in an app update, not in the first version: until that update, Recimama runs on a Duo the way apps not yet made for it do.</p>
+        <p>With the update, opened flat, <a href="#cook">the cook screen</a> divides in two: the step you’re on, with the ingredients it needs, in one half, and what’s coming and the timeline in the other.</p>
         <ul class="ticks">
           <li>“Side by side” or “Top and bottom”, whichever you ask for.</li>
           <li>Folded half open like a laptop, the step takes the top half, and nothing you need to tap sits on the crease.</li>
           <li>The lower half is yours to choose: the timeline, what’s coming, the ingredients for this step, or none of them.</li>
-          <li>“Fill the screen” puts the app’s own bars away and gives the step all the room they took, centred across the whole width of the glass. One tap brings them back.</li>
+          <li>“Fill the screen” puts the app’s own bars away and gives the step all the room they took, centered across the whole width of the glass. One tap brings them back.</li>
           <li>Finish stays one tap away in both layouts.</li>
           <li>The page carries to every edge, under the system’s own strip.</li>
         </ul>
+      </div>
+      <div class="feature-text feature-art">
         <figure class="story-fig">
           <div class="story story-duo" aria-hidden="true">
             <p class="story-head"><span>Spaghetti Carbonara</span><span class="s5-fin">Finish</span></p>
@@ -463,7 +498,7 @@ body_class: home
                   <div class="s5-half s5-face s5-inside">
                     <p class="s5-big">Pancetta — diced</p>
                     <div class="s5-grp">
-                      <p class="s5-ing">120 grams pancetta</p>
+                      <p class="s5-ing">120 g pancetta</p>
                       <p class="s5-row"><span class="s5-left">2 min left</span><span class="s5-how">Hands on</span></p>
                       <p class="s5-meter"><i></i></p>
                       <p class="s5-btn">Done — next step</p>
@@ -485,22 +520,6 @@ body_class: home
           <figcaption>Drawn for this page, not a picture of the device: the cook screen as the update will lay it out. Closed, the step you’re on is on the outer screen; opened like a book, the step and its ingredients take one half, and what’s coming and the timeline the other. Finish never moves.</figcaption>
         </figure>
       </div>
-      <div class="shots shots-mixed">
-        <figure class="shot">
-          <picture>
-            <source type="image/webp" srcset="/assets/screens/13-duo-cook.webp">
-            <img class="crop" src="/assets/screens/13-duo-cook.jpg" width="600" height="873" loading="lazy" alt="The cook-along screen on an iPhone Duo: Spaghetti Carbonara, 5 seconds elapsed and 27 minutes remaining, a note that alerts are set for each step and that the timeline is on the lock screen, the step in progress, Pancetta, diced, with 120 grams of pancetta, hands on and 2 minutes left, and three steps coming up. The page’s colour runs to the right-hand edge, under the system’s vertical strip, which holds the app’s own buttons: minimise, more, re-plan, the layout control and Finish.">
-          </picture>
-          <figcaption>Finish on the strip, and the page under it to the edge.</figcaption>
-        </figure>
-        <figure class="shot">
-          <picture>
-            <source type="image/webp" srcset="/assets/screens/14-duo-fill-screen.webp">
-            <img class="crop" src="/assets/screens/14-duo-fill-screen.jpg" width="600" height="873" loading="lazy" alt="The same cook on an iPhone Duo with the screen filled: the recipe name, the clock and the buttons on the system’s vertical strip are gone, and the whole screen, centred with the same margin on both sides, holds 14 seconds elapsed and 27 minutes remaining, the alerts and lock-screen notes, the step in progress, Pancetta, diced, with 120 grams of pancetta, hands on and 2 minutes left, three steps coming up and the timeline. One small button in the bottom corner brings the bars back.">
-          </picture>
-          <figcaption>Fill the screen: the bars put away, the step centred edge to edge.</figcaption>
-        </figure>
-      </div>
     </div>
   </div>
 </section>
@@ -513,55 +532,84 @@ body_class: home
         <p class="eyebrow">Optional</p>
         <h2 id="pro-title">Recimama Pro</h2>
 {%- comment -%}
-  The trial wording is true only while App Store Connect step P7 (a free two-week introductory offer on
-  BOTH plans) is live. `pro_trial` is true since 2026-09-30: the lead checked by the App Store Connect
-  API at 16:12 that both plans carry it in all 175 territories. Every clause of the TRUE branch is the
-  app's own rule: one trial per subscription group per Apple Account, and only while the App Store says
-  this account can have it (ProAccess.isEligibleForTrial, isEligibleForIntroOffer); "Cancel at least 24
-  hours before then and you won't be charged." (ProTerms.trialCancelNotice); "Renews automatically ...
-  until you cancel" (ProTerms.renewalPromise); no ads in a trial or a family share while it lasts
-  (ProTerms.noAdsSummary, docs/revenue-model/REPORT.md section 4, "No ads for").
+  The trial wording is true only while the free introductory offer is live on BOTH plans in App Store
+  Connect: a 3-day free trial since 5 October 2026 (the developer: "Lets reduce to a 3 day trial please";
+  the earlier offers were replaced territory by territory, and the App Store Connect API read back a 3-day
+  free trial on monthly and yearly in 175 of 175 territories). Every clause of the TRUE
+  branch is the app's own rule: one trial per subscription group per Apple Account, and only while the App
+  Store says this account can have it (ProAccess.isEligibleForTrial, isEligibleForIntroOffer); "3-day free
+  trial" as the App Store says it (ProCatalogue.chosenTrialDays, ProTerms: "Try free for 3 days, then ...");
+  "Cancel at least 24 hours before then and you won't be charged." (ProTerms.trialCancelNotice); "Renews
+  automatically ... until you cancel" (ProTerms.renewalPromise). Lifetime has no trial and never renews.
+  Recimama Pro Lifetime (since 5 October 2026, ProLifetime.swift): a non-consumable, $49.99 in the U.S. (App
+  Store Connect's base price; other storefronts Apple-equalized, e.g. 49.99 in the UK), Family Sharing off.
+  Its sentences are the app's: "$49.99 once" (ProTerms.lifetimePrice), "One payment. It never renews, so
+  there's nothing to cancel. Lifetime isn't shared through Family Sharing." (ProTerms.lifetimeTerms) and
+  "Buying it doesn't cancel a subscription you already have" (the Terms' Lifetime paragraph; in the app,
+  ProTerms.lifetimeKeepsYourSubscription says it to a subscriber).
 {%- endcomment %}
 {% if site.pro_trial %}
-        <p>Recimama is free to download, with an optional subscription. Recimama Pro starts with a 14-day free trial for new subscribers, once per Apple Account; cancel at least 24 hours before it ends and you won’t be charged. After that it renews automatically until you cancel, and the price is shown in the app before you subscribe.</p>
+        <p>Recimama is free to download. Recimama Pro is optional: a monthly or yearly subscription, or Lifetime, bought once. The monthly and yearly plans start with a 3-day free trial for new subscribers, once per Apple Account; cancel at least 24 hours before it ends and you won’t be charged. After that they renew automatically until you cancel, and the price is shown in the app before you subscribe.</p>
 {% else %}
-        <p>Recimama is free to download, with an optional subscription, Recimama Pro. It renews automatically until you cancel, and the price is shown in the app before you subscribe.</p>
+        <p>Recimama is free to download. Recimama Pro is optional: a monthly or yearly subscription, or Lifetime, bought once. The plans renew automatically until you cancel, and the price is shown in the app before you subscribe.</p>
 {% endif %}
+        <p><strong>Recimama Pro Lifetime</strong> is $49.99 once in the U.S., and the app shows the price in your country before you buy. One payment. It never renews, so there’s nothing to cancel. Lifetime isn’t shared through Family Sharing, and buying it doesn’t cancel a subscription you already have.</p>
         <ul class="pro-list">
           <li><strong>Cook several dishes on one timeline.</strong> One clock for the whole meal, so every dish lands on the table together.</li>
           <li><strong>Suggest a week.</strong> A week of dinners picked from your own recipes, put straight onto the plan.</li>
           <li><strong>Use your own step times.</strong> Recimama notices when a step keeps taking you a different time from the recipe; with Pro, one tap re-plans the timeline around your usual times.</li>
           <li><strong>Cook it with someone.</strong> The timeline re-planned for two people, with every step given to one of you.</li>
           <li><strong>What can I do the night before?</strong> Which steps can be done the day before, and how short the evening becomes.</li>
+{%- comment -%}
+  Pro's sixth feature since 2026-10-04 (the developer: "a pro feature for sure"): ProFeature.menuCard's title
+  and summary word for word (RecipeKit/Sources/RecipeKit/Pro/ProFeature.swift). The party itself stays free;
+  only the menu card is Pro. The seventh and eighth since 5 October 2026, the developer's TestFlight feedback ("Lets
+  put the photograph features behind the pro features please", "The recipe card should be a pro feature too"):
+  ProFeature.photoImport and .recipeCard, title and summary word for word, last as in the app's own list.
+  The sentence after photoImport's summary is the Add sheet's own condition for its three Invent something
+  routes ("Writing the recipe needs Apple Intelligence"), so the page promises no written recipe on a device
+  without it. Customize card (a recipe's own photo, color, emoji and tags) is not on this list: it stays free.
+  Build 9 (TestFlight 1.0 (8), 9 October 2026; the developer: "it should be a pro feature"): reading a recipe from
+  a video joined photoImport, still eight things, so its title and summary are the app's new ones word for word:
+  "Read recipes from photos and videos", "Recipes from your photos and videos: ... or a video you saved."
+{%- endcomment %}
+          <li><strong>Make a menu.</strong> A meal with friends, as a menu to share or print.</li>
+          <li><strong>Read recipes from photos and videos.</strong> Recipes from your photos and videos: a cookbook page, a screenshot, a dish, your fridge, a menu or a video you saved. Writing a recipe from a dish, your fridge or a menu needs Apple Intelligence.</li>
+          <li><strong>Make a recipe card.</strong> A recipe as a printable card to share as an image or a PDF, with its photo when it has one.</li>
         </ul>
 {%- comment -%}
-  The app's own two sentences, as its paywall lists them beside the features since 2026-09-30:
-  ProTerms.familySharing and ProTerms.whatIsKept (RecipeKit/Sources/RecipeKit/Pro/ProTerms.swift,
-  worktree pro-upgrade). Word for word; only the apostrophes are the page's curly ones, as everywhere else
-  on the site (the lead's call, 2026-10-01 — the words are what must match ProTerms, not the typography).
+  The app's own three sentences, as its paywall and the welcome tour's Pro page say them: ProTerms.familySharing
+  (naming the plans since Lifetime, 5 October 2026), ProTerms.whatIsKept and ProTerms.whatStaysFree (which names
+  the ways in that stay free since reading a recipe from a photo became Pro). Word for word at 8c9173b; only the
+  apostrophes are the page's curly ones, as everywhere else on the site (the lead's call, 2026-10-01 — the words
+  are what must match ProTerms, not the typography).
 {%- endcomment %}
         <ul class="ticks pro-notes">
-          <li>Family Sharing is on: up to five other people in your family group can use Pro too, at no extra cost.</li>
+          <li>Family Sharing is on for the monthly and yearly plans: up to five other people in your family group can use Pro too, at no extra cost. Lifetime is for your Apple Account only.</li>
           <li>If Pro ends, nothing you’ve made goes away: a meal already cooking finishes, step times you’ve applied stay applied, and your plans stay on the calendar.</li>
+          <li>Everything else stays free: your recipes, importing them from the web, a link, text, dictation or a PDF, cooking one dish with the timeline, the meal plan, shopping lists and sync.</li>
         </ul>
-{% if site.pro_trial %}
-        <p class="aside">Subscribing removes the ads, and so does a free trial or a family share while it lasts. Without Pro, Recimama shows a few ads on its browsing screens, such as the recipe list, search and the meal plan, and never while you cook. Ads are not personalised.</p>
-{% else %}
-        <p class="aside">Subscribing removes the ads, and so does a family share while it lasts. Without Pro, Recimama shows a few ads on its browsing screens, such as the recipe list, search and the meal plan, and never while you cook. Ads are not personalised.</p>
-{% endif %}
+{%- comment -%}
+  The ads line since 8 October 2026, the developer's rule ("Ads should appear again if the subscription is
+  cancelled or if the lifetime was returned"): no ads while Pro is active (a plan, its free trial, a family share,
+  Lifetime), ads again when it ends. Its first two sentences are ProTerms.noAdsSummary word for word, the line
+  the paywall and the Pro tour show. A trial and a family share are Pro while they last, so one sentence serves
+  with or without the trial.
+{%- endcomment %}
+        <p class="aside">Pro has no ads. If your Pro ends — a plan runs out after you cancel, or a purchase is refunded — ads come back. Without Pro, Recimama shows a few ads on its browsing screens, such as the recipe list, search and the meal plan, and never while you cook. Ads are not personalized.</p>
       </div>
       <div class="shots shots-mixed">
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/08-suggest-a-week-days.webp">
-            <img class="crop" src="/assets/screens/08-suggest-a-week-days.jpg" width="600" height="808" loading="lazy" alt="Suggest a week, a Pro feature: dinners suggested for today, tomorrow, Thursday and Friday, Chicken and Potato Traybake, Thai Green Curry, Red Lentil Dal and Roast Root Vegetables, each with its hands-on minutes and a Not this option.">
+            <img class="crop" src="/assets/screens/08-suggest-a-week-days.jpg" width="600" height="808" loading="lazy" alt="Suggest a week, a Pro feature: dinners suggested for today, tomorrow, Thursday and Friday, Chicken and Potato Traybake, Thai Green Curry, Red Lentil Dal and Roast Root Vegetables, each with the minutes it needs you and a Not this option.">
           </picture>
           <figcaption><span class="pro">Pro</span> Suggest a week, from your own recipes.</figcaption>
         </figure>
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/11-two-cooks.webp">
-            <img class="crop" src="/assets/screens/11-two-cooks.jpg" width="600" height="557" loading="lazy" alt="Splitting the work for Spaghetti Carbonara, a Pro feature: each step given to You or Them, with when to start it, from at once to 33 minutes in.">
+            <img class="crop" src="/assets/screens/11-two-cooks.jpg" width="600" height="557" loading="lazy" alt="Splitting the work for Spaghetti Carbonara, a Pro feature: each step given to You or Them, with when to start it, from at once to 23 minutes in.">
           </picture>
           <figcaption><span class="pro">Pro</span> Two cooks, every step given to one of you.</figcaption>
         </figure>
@@ -575,11 +623,11 @@ body_class: home
     <div class="closing-card">
       <img class="closing-icon" src="/assets/icons/icon-192.png" width="80" height="80" alt="" loading="lazy">
       <h2 id="soon-title">Coming soon to the App Store</h2>
-      <p class="closing-sub">For iPhone, iPad and Apple Watch. Free to download, with an optional subscription.</p>
+      <p class="closing-sub">For iPhone, iPad and Apple Watch. Free to download, with an optional subscription or one-time purchase.</p>
       <div class="closing-notes">
         <div>
           <h3>No account to create</h3>
-          <p>Your recipes stay on your devices and in your own iCloud.</p>
+          <p>Your recipes stay on your devices and in your own iCloud, unless you share one on <a href="/guidelines.html">Explore</a>, where everyone who uses Recimama can see it.</p>
         </div>
         <div>
           <h3>Made by one person</h3>

@@ -1,6 +1,6 @@
 # Recimama Terms of Use
 
-*Last updated: 29 September 2026*
+*Last updated: 9 October 2026*
 
 These terms are an agreement between you and David Rodriguez, who makes Recimama ("we", "us"). They cover using Recimama, and above all sharing recipes on Explore. By using the app you agree to them. If you don't agree, please don't use Recimama.
 
@@ -56,7 +56,7 @@ Explore says how a recipe was made where it matters. A recipe invented with Appl
 
 ### Taking it down
 
-You can take down a recipe you shared at any time. Swipe it left in **Explore > More > Recipes you shared**, or use **Settings > About > Remove something I published**. Or email us. It stops being shown on Explore, normally within moments, though a list somebody already has open keeps it until Explore loads again. Copies people already saved stay in their libraries.
+You can take down a recipe you shared at any time. Open it and choose **Remove from Explore**, or use **Settings > Your recipes on Explore**, which lists everything you've shared from any of your devices and can remove it all at once. Or email us. It stops being shown on Explore, normally within moments, though a list somebody already has open keeps it until Explore loads again. Copies people already saved stay in their libraries.
 
 ### Removing content and blocking cooks
 
@@ -156,9 +156,9 @@ We respond to notices of copyright infringement under the US Digital Millennium 
 
 **Repeat infringers.** A cook named in two valid copyright notices is blocked from Explore, and everything they've shared is removed. A notice that is withdrawn doesn't count. Nor does one answered by a counter-notice that wasn't followed by a court action. We handle intellectual-property claims that Apple forwards to us the same way.
 
-## 7. Meal rotas and dinner parties
+## 7. Meal trains and dinner parties
 
-When you organise a meal rota or a dinner party, you choose who gets its link. Anyone who has the link can open the rota and sign up. Rotas live in the organiser's private iCloud. We can't see them, and we can't take them down. The organiser can remove people and stop sharing (**Share > Manage who's on it**), and anyone can leave. The community guidelines apply to rotas too. If someone uses one to harass you or to share something illegal, leave it and email us. We can't see it, but we'll tell you what can be done.
+When you organise a meal train or a dinner party, you choose who gets its link. Anyone who has the link can open the meal train and sign up. Meal trains live in the organiser's private iCloud. We can't see them, and we can't take them down. The organiser can remove people and stop sharing (**Share > Manage who's on it**), and anyone can leave. The community guidelines apply to meal trains too. If someone uses one to harass you or to share something illegal, leave it and email us. We can't see it, but we'll tell you what can be done.
 
 ## 8. Cooking safety
 
@@ -176,20 +176,21 @@ You decide how you cook and what you serve.
 
 ## 9. Recimama Pro and the ads
 
-**Recimama Pro** is an optional subscription. It adds planning features, and everything else in Recimama stays free.
+**Recimama Pro** is optional: a monthly or yearly subscription, or **Recimama Pro Lifetime**, bought once. It adds planning features, recipes read from your photos and videos and a printable recipe card, and everything else in Recimama stays free.
 
-- **Apple sells it.** Apple takes the payment under its own terms, and the price is shown before you subscribe.
-- **Renewal.** It renews automatically at the price shown until you cancel. If the price ever changes, Apple tells you first.
+- **Apple sells it.** Apple takes the payment under its own terms, and the price is shown before you buy.
+- **Renewal.** A subscription renews automatically at the price shown until you cancel. If the price ever changes, Apple tells you first.
 - **Free trial.** Where one is offered, cancel at least 24 hours before it ends and you won't be charged.
 - **Cancelling.** To stop a renewal, cancel at least 24 hours before it. Pro stays on until the end of the period you've paid for. How to cancel:
-  - on an iPhone or iPad, **Settings > [your name] > Subscriptions**
+  - on an iPhone, iPad or Apple Vision Pro, **Settings > [your name] > Subscriptions**
   - on a Mac, the **App Store > [your name] > Subscriptions**
   - on any of them, **Settings > Purchases > Manage Subscription** in Recimama
+- **Lifetime** is one payment. It never renews, so there is nothing to cancel, and it lasts for as long as Recimama is offered, on any device signed in to the Apple Account that bought it; **Restore Purchases** brings it back on a new device. It isn't shared through Family Sharing. Buying it doesn't cancel a subscription you already have: that keeps renewing until you cancel it, as above. If Apple refunds Lifetime, Pro ends.
 - **Refunds** are Apple's to give. Ask at [reportaproblem.apple.com](https://reportaproblem.apple.com). If you're in the EU or the UK, cancelling a new purchase within 14 days also goes through Apple.
-- **Family Sharing** is on, so the people in your family group can use Pro too.
+- **Family Sharing** is on for the monthly and yearly plans, so the people in your family group can use them too. It is off for Lifetime.
 - **If Pro ends**, nothing you made with it is deleted.
 
-**The ads.** The free version shows a few ads from Google while you browse, never while you cook, as the [privacy policy](privacy.html) describes. This version has no full-screen (interstitial), app-open, video or rewarded ads. You won't see ads if you have ever paid for Recimama Pro, or while you're in a free trial or share Pro through Family Sharing. There are no ads on a Mac. Google, not us, chooses the ads. To report one, tap the flag beside it.
+**The ads.** The free version shows a few ads from Google while you browse, never while you cook, as the [privacy policy](privacy.html) describes. This version has no full-screen (interstitial), app-open, video or rewarded ads. You won't see ads while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. There are no ads on a Mac or Apple Vision Pro. Google, not us, chooses the ads. To report one, tap the flag beside it.
 
 ## 10. The app as it is
 

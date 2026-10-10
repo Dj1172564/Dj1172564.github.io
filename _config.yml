@@ -7,19 +7,18 @@ markdown: kramdown
 # The one place the contact address is written. The footer and the home page read it.
 email: rodrigobayapps@gmail.com
 
-# True only while the 14-day free trial (the introductory offer, docs/app-store/YOUR-STEPS.md
-# step P7) is live in App Store Connect for BOTH plans. Switched on 2026-09-30: the App Store
-# Connect API showed, at 16:12 that day, a two-week free-trial introductory offer on both plans in
-# all 175 territories. Switch back to false if that offer is ever removed or changed.
-# It changes the Pro wording on the home page; nothing else.
+# True only while the free trial (the introductory offer, docs/app-store/YOUR-STEPS.md step P7) is
+# live in App Store Connect for BOTH plans. Switched on 2026-09-30 for the first offer; since
+# 5 October 2026 the offer is a 3-day free trial (the developer: "Lets reduce to a 3 day trial please"), read
+# back through the App Store Connect API that evening on both plans in all 175 territories, and the
+# home page says 3 days. Switch back to false if that offer is ever removed, and change the page's
+# wording if its length changes. It changes the Pro card's trial sentence on the home page; nothing else.
 pro_trial: true
 
-# The "Ready for the iPhone Duo" section on the home page. True because the device has been
-# announced and goes on sale next month, and the section says so: the support arrives in an app
-# update when the Duo does, never that today's download already has it. Switch to false and the
-# whole section goes from the page, screenshots and drawing with it. The image files
-# (assets/screens/13-duo-* and 14-duo-*) are still published, just unreferenced; delete them too
-# if they must not be on the site at all. Nothing else reads this.
+# The "Coming to the iPhone Duo" section on the home page. True because the device has been
+# announced and goes on sale October 23, 2026, and the section says so: the support comes in an app
+# update, never that today's download already has it. Switch to false and the whole section goes
+# from the page, drawing and all (it has had no screenshots since 2026-10-04). Nothing else reads this.
 duo_ready: true
 
 # No theme. GitHub Pages applies jekyll-theme-primer unless this says null, and

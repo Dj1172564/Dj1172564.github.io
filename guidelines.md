@@ -52,6 +52,6 @@ If reporting in the app doesn't work, or you don't have the app, email **[rodrig
 
 ## Your recipes stay yours
 
-Sharing a recipe lets everyone who uses Recimama read it and add a copy to their own library. The [Terms of Use](terms.html) explain the permission you give. You can take it down at any time from **Explore > More > Recipes you shared**. Copies people have already added stay in their libraries.
+Sharing a recipe lets everyone who uses Recimama read it and add a copy to their own library. The [Terms of Use](terms.html) explain the permission you give. You can remove it from Explore at any time: open it and choose **Remove from Explore**, or use **Settings > Your recipes on Explore**. Copies people have already added stay in their libraries.
 
 How we handle what you publish is explained in the [privacy policy](privacy.html).
