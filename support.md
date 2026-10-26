@@ -35,7 +35,7 @@ If Pro ends, nothing you made with it is deleted.
 
 ## Ads
 
-The free version shows a few ads from Google while you browse, never while you cook. This version has no full-screen, app-open, video or rewarded ads. You won't see any while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. On a Mac or Apple Vision Pro there are no ads. To report an ad, tap the flag beside it. What Google receives is in the [privacy policy](privacy.html), section 11.
+The free version shows a few ads from Google while you browse, and one banner at the very end of the cook screen, below your steps. Never between your steps, over the cook's controls, on the lock screen or on your Apple Watch. While a cook is running, that banner is the only ad. This version has no full-screen, app-open, video or rewarded ads. You won't see any while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. On a Mac or Apple Vision Pro there are no ads. To report an ad, tap the flag beside it. What Google receives is in the [privacy policy](privacy.html), section 11.
 
 ## Your recipes and iCloud
 

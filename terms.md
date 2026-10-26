@@ -1,6 +1,6 @@
 # Recimama Terms of Use
 
-*Last updated: 9 October 2026*
+*Last updated: 21 October 2026*
 
 These terms are an agreement between you and David Rodriguez, who makes Recimama ("we", "us"). They cover using Recimama, and above all sharing recipes on Explore. By using the app you agree to them. If you don't agree, please don't use Recimama.
 
@@ -190,7 +190,7 @@ You decide how you cook and what you serve.
 - **Family Sharing** is on for the monthly and yearly plans, so the people in your family group can use them too. It is off for Lifetime.
 - **If Pro ends**, nothing you made with it is deleted.
 
-**The ads.** The free version shows a few ads from Google while you browse, never while you cook, as the [privacy policy](privacy.html) describes. This version has no full-screen (interstitial), app-open, video or rewarded ads. You won't see ads while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. There are no ads on a Mac or Apple Vision Pro. Google, not us, chooses the ads. To report one, tap the flag beside it.
+**The ads.** The free version shows a few ads from Google while you browse, and one banner at the very end of the cook screen, below your steps. Never between your steps, over the cook's controls, on the lock screen or on your Apple Watch. The [privacy policy](privacy.html) describes where they are. This version has no full-screen (interstitial), app-open, video or rewarded ads. You won't see ads while your Recimama Pro is active: a paid subscription, Lifetime, a free trial or Pro shared through Family Sharing. If your Pro ends (a subscription runs out, or Apple refunds a purchase), the ads come back. There are no ads on a Mac or Apple Vision Pro. Google, not us, chooses the ads. To report one, tap the flag beside it.
 
 ## 10. The app as it is
 

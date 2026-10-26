@@ -1,10 +1,10 @@
 # Recimama Privacy Policy
 
-*Last updated: 19 October 2026*
+*Last updated: 21 October 2026*
 
 Recimama is a cooking app made by David Rodriguez ("we", "us"), an individual developer in the United States. This policy describes what the app does with your information: what stays on your device, what goes to your own iCloud, what becomes public if you publish a recipe, what Apple and Google receive, and what other websites receive when you ask the app to fetch something.
 
-**In short:** Recimama has no accounts. Your recipes stay on your device and in your own private iCloud, which we cannot see. We can see something about you in only two situations: when you **publish a recipe to Explore**, which makes it public, and when you **report something or email us**. The free version shows a few **ads from Google** while you browse recipes, never while you cook. Section 11 says exactly what Google receives, what it doesn't, and who never sees an ad. Google's ad software is the only third-party code in the app. We have no analytics of our own, we never ask to track you, and we never sell your information.
+**In short:** Recimama has no accounts. Your recipes stay on your device and in your own private iCloud, which we cannot see. We can see something about you in only two situations: when you **publish a recipe to Explore**, which makes it public, and when you **report something or email us**. The free version shows a few **ads from Google** while you browse, and one banner at the very end of the cook screen, below your steps. Never between your steps, over the cook's controls, on the lock screen or on your Apple Watch. Section 11 says exactly what Google receives, what it doesn't, and who never sees an ad. Google's ad software is the only third-party code in the app. We have no analytics of our own, we never ask to track you, and we never sell your information.
 
 If you buy **Recimama Pro**, as a subscription or as Lifetime, Apple handles the purchase and the payment. The app stores no payment details and we never see them (section 10).
 
@@ -191,12 +191,14 @@ Recimama Pro is optional, sold through the App Store as a subscription or as a o
 - as one banner at the bottom of the meal plan
 - as one banner at the bottom of a recipe you open from Recipes or Favorites
 
-There are **no ads anywhere else**: not while you're cooking (a recipe's banner goes as soon as you start, and stays away until the cook ends), and not in the shopping list, the shared meal trains, the import screens, Settings, the widgets, the notifications, the Apple Watch app or the Safari and share extensions. While the Recimama Pro screen is open, the ads under it are hidden. This version of Recimama has **no full-screen (interstitial), app-open, video or rewarded ads**, and an ad never interrupts what you're doing. If a later version adds another kind of ad, this policy will say so before that version is released.
+**While you cook,** there is one banner at the very end of the cook screen, below your steps: the last thing you reach when you scroll to the end, under the last step and everything else, with a small "Advertisement" label above it. Never between your steps, over the cook's controls, on the lock screen or on your Apple Watch. It is requested only when the end of the cook screen is within about a screen of coming into view (in a long cook, as you scroll toward the end), and a cook has one at most. It is hidden while something covers the cook screen, such as a time's-up card, an alert, a sheet or the Recimama Pro screen. While a cook is running it is the only ad, and while the cook is minimized there is none at all: a recipe's banner goes as soon as you start, and the other places above show none until the cook ends.
+
+There are **no ads anywhere else**: not in the shopping list, the shared meal trains, the import screens, Settings, the widgets, the notifications, the Live Activity, the Apple Watch app or the Safari and share extensions. While the Recimama Pro screen is open, the ads under it are hidden. This version of Recimama has **no full-screen (interstitial), app-open, video or rewarded ads**, and an ad never interrupts what you're doing. If a later version adds another kind of ad, this policy will say so before that version is released.
 
 **Who never sees ads.**
 
 - **Anyone whose Recimama Pro is active**: a subscription that is paid up (including one whose renewal you've turned off, until the period you paid for ends, and during Apple's billing grace period), Lifetime, a free trial, or Pro shared with you through Family Sharing.
-- **When Pro ends, the ads come back**: when a subscription runs out, when Apple refunds a purchase, or when the Family Sharing stops. They come back from the next screen with an ad, never in the middle of a cook.
+- **When Pro ends, the ads come back**: when a subscription runs out, when Apple refunds a purchase, or when the Family Sharing stops. They come back the next time a place with an ad comes on screen.
 - **Anyone using Recimama on a Mac or Apple Vision Pro.** Google doesn't say that its ad software supports iPad apps running on a Mac, and describes it only for iPhone and iPad, so Recimama doesn't start it on a Mac or on Apple Vision Pro, and shows no ads on either.
 - **Anyone Apple tells us is under 13.** Recimama doesn't start Google's software at all for them, so Google is never contacted and no ad is ever requested. We never send Google the age range, or anything worked out from it. Section 13 explains where the age range comes from and why we don't keep it.
 
