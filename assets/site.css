@@ -1,11 +1,11 @@
 /* Recimama site palette.
- * Card colours: the app's own swatches, RecipeKit/Sources/RecipeKit/Support/Palette.swift:42-74 (main).
+ * Card colours: the app's own swatches.
  *   --c-NAME        the app's accent (fills: bars, chips, dots). Not for small text.
  *   --c-NAME-text   text-safe on this site's --bg, --surface and --band (>= 4.5:1, measured).
- *                   Derived the app's way (CardColor.swift:97-106): hue and saturation kept, brightness
+ *                   Derived the app's way: hue and saturation kept, brightness
  *                   moved 1% at a time. Where the app's own `legible` already passes here it is used as is.
  *   --c-NAME-ink    black or white text ON the accent fill, whichever measures higher (all >= 4.95:1).
- * Attention colours (the timeline's three bars) follow Attention.chartPalette, CardColor.swift:288-294:
+ * Attention colours (the timeline's three bars) follow the app's own chart palette:
  *   hands on = tomato, keep an eye on it = carrot, looks after itself = ocean.
  * Neutrals are taken from the app icon (background #22261C -> #12140E, cream bar #EEECE4).
  * Every text pairing is listed with its ratio in manifest.json > palette.checks. */
@@ -375,7 +375,7 @@ main:focus { outline: none; }
   .feature-flip .feature-text { order: 2; }
 }
 
-/* The app's own attention colours, as used in screenshot 02 (CardColor.swift:288-294). */
+/* The app's own attention colours, as used in screenshot 02. */
 .key-intro { margin-bottom: .6rem; }
 .attn-key { list-style: none; margin: 0 0 1.25rem; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .9375rem; font-weight: 600; }
 .attn-key li { display: inline-flex; align-items: center; gap: .5rem; }
@@ -623,7 +623,7 @@ main:focus { outline: none; }
   .brand img { transition: transform .4s var(--ease-pop); }
   .brand:hover img, .brand:focus-visible img { transform: rotate(-4deg) scale(1.06); }
 
-  /* The Coming soon dot breathes while it is on screen. site.js adds `live` only while the badge is
+  /* The App Store badge's dot breathes while it is on screen. site.js adds `live` only while the badge is
      in view and `tab-hidden` when the tab goes away, so it never runs unseen or beside your reading. */
   .js-anim .soon.live .soon-badge::before { animation: soon-pulse 3s ease-in-out .8s infinite; }
   .js-anim.tab-hidden .soon.live .soon-badge::before { animation-play-state: paused; }
@@ -649,11 +649,11 @@ main:focus { outline: none; }
    Each `.story` is a small drawing of one of the app's screens, built out of divs: the ingredient
    list ticking itself off, two dishes sliding onto one timeline, a cook-along step finishing, a
    week filling up, a foldable opening like a book. They sit beside the real screenshots and never
-   replace one. Every word in them is the app's own (App/Views/WelcomeTourView.swift's own example
-   timeline — Boil water, Fry bacon, Whisk eggs, Cook pasta, Toss together — CookAlongView's
-   "Alerts set — you can put the phone down." and "Done — next step", ShoppingListView's "Amounts
-   are added together" and "to get", CookSplit.Pane's own three names — "What's coming",
-   "Timeline", "Ingredients for this step" — and the two real totals from screenshot 05).
+   replace one. Every word in them is the app's own (the welcome tour's own example timeline —
+   Boil water, Fry bacon, Whisk eggs, Cook pasta, Toss together — the cook-along's "Alerts set —
+   you can put the phone down." and "Done — next step", the shopping list's "Amounts are added
+   together" and "to get", the cook screen's own three pane names — "What's coming", "Timeline",
+   "Ingredients for this step" — and the two real totals from screenshot 05).
 
    Each drawing is aria-hidden; the figcaption beside it says the same thing in words, so nothing
    here is the only way to learn anything.
@@ -670,7 +670,7 @@ main:focus { outline: none; }
    Each story plays once and rests. Nothing here loops: every one of them is a one-way fact (prep
    before step 1, dishes coming together, a step finishing, a list filling) and replaying it would
    mean running the clock backwards, which is the one thing the app is about. The page's only
-   endless movement stays the "Coming soon" dot.
+   endless movement stays the App Store badge's dot.
    ============================================================================================ */
 
 .story-fig { margin: 1.75rem 0 1.5rem; }
@@ -928,7 +928,7 @@ main:focus { outline: none; }
      move. The percentages are of each bar's OWN width: 3/57 for the dal, and 25/85 of the chart
      for .s2-move, which also carries the finish line back from 85 to 60.
      The figures are the app's own for its seeded dal and carbonara, one cook, ready together on
-     (MenuScheduler + verdict, worked out 2026-10-04 on the integration line at bafdb9c): 57 + 28 min
+     (as the app's meal planner works them out, 4 October 2026): 57 + 28 min
      on their own, 1 hr together, 25 min saved. Change them here, in index.html's story and in the
      counter's steps() below together.
      The opening comparison is held ~1.9s (the panel itself is still fading in for the first 0.7s),

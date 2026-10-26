@@ -19,7 +19,7 @@
 
    Only transform and opacity are animated (and the chart's clip-path), so nothing reflows and no
    text ever moves while it is being read. Scroll triggers are IntersectionObservers; the one thing
-   that loops (the Coming soon dot) runs only while it is on screen and pauses with the tab. */
+   that loops (the dot on the App Store badge) runs only while it is on screen and pauses with the tab. */
 (function () {
   var doc = document, root = doc.documentElement;
   var quiet = window.matchMedia ? matchMedia('(prefers-reduced-motion: reduce)') : null;
@@ -213,7 +213,7 @@
     if (box.classList.contains('meal')) setTimeout(function () { box.classList.add('play'); }, 420);
   }
 
-  /* The Coming soon dot breathes, but only while it is on screen (and site.css stops it with the
+  /* The App Store badge's dot breathes, but only while it is on screen (and site.css stops it with the
      tab hidden), so it can never distract from reading the rest of the page. */
   function pulse() {
     var soon = doc.querySelector('.soon');
