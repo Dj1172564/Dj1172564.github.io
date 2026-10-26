@@ -1039,3 +1039,9 @@ main:focus { outline: none; }
   40% { opacity: 1; }
   100% { opacity: 0; transform: translateX(150%); }
 }
+
+/* 20 October 2026: the app is on the App Store, so the badge and the closing heading are links. They keep their look;
+   the badge takes the link colour and both underline on hover or keyboard focus. */
+a.soon-badge { color: var(--link); text-decoration: none; }
+.closing h2 a { color: inherit; text-decoration: none; }
+a.soon-badge:hover, a.soon-badge:focus-visible, .closing h2 a:hover, .closing h2 a:focus-visible { text-decoration: underline; text-underline-offset: .15em; }
