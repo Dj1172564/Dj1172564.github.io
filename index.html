@@ -425,47 +425,39 @@ body_class: home
 </section>
 
 {%- comment -%}
-  The iPhone Duo section. Apple has announced the device and it goes on sale October 23, 2026;
-  Recimama's support for it ships in an APP UPDATE, not in the first version. So every line here is
-  written in the future — "Coming to", "comes in an app update" — and nothing claims that the
-  download waiting on the App Store already folds. None of it is Pro (CookAlongView gates none of
-  the layout work behind a subscription), so nothing here is marked Pro.
+  The iPhone Duo section. The app on the App Store supports the iPhone Duo, so every line here is
+  in the present tense and says only what that app does: nothing is promised for a later update.
+  None of it is Pro (none of the layout work is behind a subscription), so nothing here is marked Pro.
 
-  Placed after "The week" and before Pro on purpose. Three reasons: the 1-2-3-4 spine through the
+  Placed after "The week" and before Pro on purpose. Two reasons: the 1-2-3-4 spine through the
   cooking story stays unbroken, where a section dropped between 3 and 4 would need a number it
-  hasn't earned; "The week" is a band, so the page's own light/band alternation wants a plain
-  section next; and a promise about next month belongs with the other two forward-looking,
-  unnumbered sections, Pro and "Coming soon to the App Store". The words still point back to
-  "Cooking along", which is the screen all of this happens on.
+  hasn't earned; and "The week" is a band, so the page's own light/band alternation wants a plain
+  section next. The words point back to "Cooking along", which is the screen all of this happens on.
 
   `duo_ready` in _config.yml takes the whole thing off the page, drawing and all.
 
-  No screenshots since 2026-10-04: the two 27.1 Duo captures (13-duo-cook, 14-duo-fill-screen) showed
-  the old spinner and "120 grams", which the app no longer draws, so the site review dropped them and
-  the files with them. The drawing, in the column they had, is the picture until the update's own
-  screens can be shot. Put them back only from a capture of the build that ships the update.
+  No screenshots: the old Duo captures (13-duo-cook, 14-duo-fill-screen) showed a spinner and
+  "120 grams", which the app no longer draws, so they came off the page. The drawing, in the column
+  they had, is the picture. Put screenshots back only from a capture of the app as it is now.
 
   The open layout's second half holds only what's coming and the timeline; the step's ingredients
-  stay in the step's half (CookAlongView.secondPane). The drawing is that open layout, and the
-  device opening into it: closed, the outer display's cook step; then one half swings open on the
-  vertical hinge like a book, and the inner display is the step with its ingredients in one half
-  (CookAlongView.focusColumn) and what's coming and the timeline in the other. It is a schematic
-  (rounded panels and a hinge line, no camera, buttons or island) and its caption says so. The
-  half-open "like a laptop" layout stays in the ticks. "Fill the screen" hides the bars and gives back
-  their height; in the 27.1 build the vertical bar stays as an empty, painted column that takes no
-  touches, and since 2026-09-30 the filled step runs under it and is centred on the glass
-  (DuoSDK.centredOnTheGlass: 16 pt a side on the outer display, 16…450 of 466 pt), so the tick says
-  the whole width.
+  stay in the step's half. The drawing is that open layout, and the device opening into it: closed,
+  the outer display's cook step; then one half swings open on the vertical hinge like a book, and the
+  inner display is the step with its ingredients in one half and what's coming and the timeline in the
+  other. It is a schematic (rounded panels and a hinge line, no camera, buttons or island) and its
+  caption says so. The half-open "like a laptop" layout stays in the ticks. "Fill the screen" hides
+  the bars and gives back their height; the vertical bar stays as an empty, painted column that takes
+  no touches, and the filled step runs under it and is centered on the glass, so the tick says the
+  whole width.
 {%- endcomment %}
 {% if site.duo_ready %}
 <section class="step" id="duo" aria-labelledby="duo-title">
   <div class="wrap">
     <div class="feature">
       <div class="feature-text">
-        <p class="eyebrow">In an update</p>
-        <h2 id="duo-title">Coming to the iPhone Duo.</h2>
-        <p>The iPhone Duo goes on sale October 23, 2026. Recimama’s support for it comes in an app update, not in the first version: until that update, Recimama runs on a Duo the way apps not yet made for it do.</p>
-        <p>With the update, opened flat, <a href="#cook">the cook screen</a> divides in two: the step you’re on, with the ingredients it needs, in one half, and what’s coming and the timeline in the other.</p>
+        <p class="eyebrow">iPhone Duo</p>
+        <h2 id="duo-title">On the iPhone Duo.</h2>
+        <p>Opened flat, <a href="#cook">the cook screen</a> divides in two: the step you’re on, with the ingredients it needs, in one half, and what’s coming and the timeline in the other.</p>
         <ul class="ticks">
           <li>“Side by side” or “Top and bottom”, whichever you ask for.</li>
           <li>Folded half open like a laptop, the step takes the top half, and nothing you need to tap sits on the crease.</li>
@@ -520,7 +512,7 @@ body_class: home
               </div>
             </div>
           </div>
-          <figcaption>Drawn for this page, not a picture of the device: the cook screen as the update will lay it out. Closed, the step you’re on is on the outer screen; opened like a book, the step and its ingredients take one half, and what’s coming and the timeline the other. Finish never moves.</figcaption>
+          <figcaption>Drawn for this page, not a picture of the device: the cook screen as Recimama lays it out. Closed, the step you’re on is on the outer screen; opened like a book, the step and its ingredients take one half, and what’s coming and the timeline the other. Finish never moves.</figcaption>
         </figure>
       </div>
     </div>

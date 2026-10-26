@@ -15,10 +15,9 @@ email: rodrigobayapps@gmail.com
 # wording if its length changes. It changes the Pro card's trial sentence on the home page; nothing else.
 pro_trial: true
 
-# The "Coming to the iPhone Duo" section on the home page. True because the device has been
-# announced and goes on sale October 23, 2026, and the section says so: the support comes in an app
-# update, never that today's download already has it. Switch to false and the whole section goes
-# from the page, drawing and all (it has had no screenshots since 2026-10-04). Nothing else reads this.
+# The "On the iPhone Duo" section on the home page. True because the app on the App Store supports
+# the iPhone Duo, and the section says only what that app does. Switch to false and the whole section
+# goes from the page, drawing and all (it has no screenshots). Nothing else reads this.
 duo_ready: true
 
 # No theme. GitHub Pages applies jekyll-theme-primer unless this says null, and
