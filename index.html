@@ -148,19 +148,22 @@ body_class: home
       <div class="feature-text">
         <h3>Get a recipe in, any way you like.</h3>
 {%- comment -%}
-  Build 3 (the line at 8c9173b, TestFlight build of 7 October 2026). Reading a recipe from a photo is Recimama Pro
-  since 5 October (ProFeature.photoImport: Photograph a page, several pages or screenshots, a photo or screenshot
-  shared to Recimama, and Invent something's three photo routes); the web, the Safari extension, a link, pasted or
-  typed text, dictation and a PDF stay free (ProTerms.whatStaysFree). So the photo routes are said "with Recimama
-  Pro" and never in the free list. The social sentence is items 17 and 17b: a post shared from, or a link pasted
-  from, Instagram, Facebook, TikTok or Threads is read from the page the platform makes for showing it on other
-  sites, a YouTube video's description from its page, and a Pinterest pin from the page it was saved from
-  (SharedPostEmbed, PinterestPin; privacy section 7). Its words are the app's: the tour's "On a recipe, a post or
-  a video, tap Share and choose Recimama", and From a video link's "Recimama reads its text caption; no video is
-  downloaded" (CaptureSheet.videoLinkDetail), with a pin's own "the page the pin was saved from" (CaptureFlows).
+  Reading a recipe from a photo is Recimama Pro since 5 October 2026 (Photograph a page, several pages or
+  screenshots, a photo or screenshot shared to Recimama, and Invent something's three photo routes); the web, the
+  Safari extension, a link, pasted or typed text, dictation and a PDF stay free, as the app's Pro screen says. So
+  the photo routes are said "with Recimama Pro" and never in the free list. The social sentence: a post shared
+  from, or a link pasted from, Instagram, Facebook, TikTok or Threads is read from the page the platform makes for
+  showing it on other sites, a YouTube video's description from its page, and a Pinterest pin from the page it was
+  saved from (privacy section 7). Its words are the app's: the tour's "On a recipe, a post or a video, tap Share
+  and choose Recimama", From a video link's "Paste a link to a recipe video or post. Recimama reads its text
+  caption.", and a pin's own "the page the pin was saved from". The app stopped saying "no video is downloaded" in
+  1.0.1: with Recimama Pro, an Instagram post's own video can be read too, fetched only when asked for, read on the
+  device and deleted afterwards (privacy sections 7 and 8; the app's own words: "reads it on this device and
+  deletes it"). The screenshot is the Add a recipe sheet without Pro, so the photo route has its PRO badge; its
+  rows are the same in 1.0.2 and 1.0.3. It is cut just above the line under From a video link.
 {%- endcomment %}
         <p>Clip it from a web page, share a link, a post or a PDF, dictate it or paste the text, then check what was read before it’s saved. With <a href="#pro">Recimama Pro</a>, photograph a cookbook page or share a screenshot too. Photographed pages and dictation are read on your device.</p>
-        <p>On Instagram, TikTok, Facebook, Threads, YouTube or Pinterest, tap Share on a post, a video or a pin and choose Recimama, or paste its link: Recimama reads its text caption, or for a pin the page it was saved from, and no video is downloaded.</p>
+        <p>On Instagram, TikTok, Facebook, Threads, YouTube or Pinterest, tap Share on a post, a video or a pin and choose Recimama, or paste its link: Recimama reads its text caption, or for a pin the page it was saved from. With Recimama Pro, it can also read an Instagram post’s own video on your device, and deletes it afterwards.</p>
 {%- comment -%}
   The duplicate finder (worktree duplicates 0457f00, free): the library notes a recipe saved twice in one
   line, Settings > Find duplicate recipes shows the copies side by side, and "Keep this one" keeps the chosen
@@ -173,7 +176,7 @@ body_class: home
         <figure class="shot">
           <picture>
             <source type="image/webp" srcset="/assets/screens/10-add-a-recipe.webp">
-            <img class="crop" src="/assets/screens/10-add-a-recipe.jpg" width="600" height="840" loading="lazy" alt="The Add a recipe sheet: Find one on the web; Photograph a page, marked PRO, for a cookbook page, a magazine or a handwritten card, read on this device; Dictate it, transcribed on this device; Paste text, to type a recipe of your own or paste one in; and From a video link, where Recimama reads the text caption of a video or post on YouTube, Instagram, TikTok or Facebook and no video is downloaded.">
+            <img class="crop" src="/assets/screens/10-add-a-recipe.jpg" width="600" height="889" loading="lazy" alt="The Add a recipe sheet: Find one on the web, “Search the web and import a recipe from the page, without leaving the app”; Photograph a page, marked PRO, “A cookbook page, a magazine or a handwritten card. Read on this device”; Dictate it, “Say the recipe out loud. Transcribed on this device”; Paste text, “Type a recipe of your own, or paste one in to keep for yourself”; and From a video link, “Paste a link to a recipe video or post. Recimama reads its text caption.”">
           </picture>
           <figcaption>From the web, a photographed page, your voice, text or a video link.</figcaption>
         </figure>
